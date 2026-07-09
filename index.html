@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Travel Thrive — We Plan Your Holiday. You Enjoy It!</title>
+<meta name="description" content="Travel Thrive is a premium travel agency and tour operator since 2000, offering inbound, domestic and outbound travel, ticketing, hotel booking, visa assistance, travel insurance and money exchange." />
+
+<!-- Google Fonts: Fraunces (display) + Manrope (sans) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;0,700;1,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<!-- ============================= NAVIGATION ============================= -->
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand">Travel<span>Thrive</span></a>
+
+    <nav class="main-nav" aria-label="Primary">
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li class="has-dropdown">
+          <a href="packages.html" class="nav-link">Packages
+            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <ul class="dropdown">
+            <li><a href="packages.html#inbound">Inbound Travel Services</a></li>
+            <li><a href="packages.html#domestic">Domestic Travel Services</a></li>
+            <li><a href="packages.html#outbound">Outbound Travel Services</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <a href="ticketing.html" class="nav-link">Ticketing
+            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <ul class="dropdown">
+            <li><a href="ticketing.html#air">Air Ticket Booking</a></li>
+            <li><a href="ticketing.html#bus">Bus Ticket Booking</a></li>
+            <li><a href="ticketing.html#train">Train Ticket Booking</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-cta">
+      <a href="tel:+919999687120" class="nav-phone">+91 99996 87120</a>
+      <a href="contact.html" class="btn btn-primary">Plan My Trip</a>
+    </div>
+
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============================= MOBILE NAV DRAWER ============================= -->
+<nav id="mobileNav" class="mobile-nav" aria-label="Mobile">
+  <ul class="mobile-nav-list">
+    <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+    <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
+    <li>
+      <button class="mobile-nav-link mobile-accordion-toggle" aria-expanded="false">
+        Packages
+        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="mobile-accordion-panel">
+        <ul>
+          <li><a href="packages.html#inbound">Inbound Travel Services</a></li>
+          <li><a href="packages.html#domestic">Domestic Travel Services</a></li>
+          <li><a href="packages.html#outbound">Outbound Travel Services</a></li>
+        </ul>
+      </div>
+    </li>
+    <li>
+      <button class="mobile-nav-link mobile-accordion-toggle" aria-expanded="false">
+        Ticketing
+        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="mobile-accordion-panel">
+        <ul>
+          <li><a href="ticketing.html#air">Air Ticket Booking</a></li>
+          <li><a href="ticketing.html#bus">Bus Ticket Booking</a></li>
+          <li><a href="ticketing.html#train">Train Ticket Booking</a></li>
+        </ul>
+      </div>
+    </li>
+    <li><a href="contact.html" class="mobile-nav-link">Contact Us</a></li>
+  </ul>
+
+  <div class="mobile-nav-contact">
+    <a href="tel:+919999687120" class="btn btn-primary">Call +91 99996 87120</a>
+    <a href="https://wa.me/919999687120" target="_blank" rel="noopener" class="btn btn-whatsapp">Chat on WhatsApp</a>
+  </div>
+</nav>
+
+<main>
+
+  <!-- ============================= 1. HERO ============================= -->
+  <section class="hero">
+    <div class="hero-media">
+      <img src="assets/hero-coastline.jpg" alt="Turquoise ocean waves washing onto a sandy beach at sunrise" />
+    </div>
+    <div class="hero-content container">
+      <span class="hero-eyebrow">Since 2000 &middot; Trusted Travel Partner</span>
+      <h1 class="hero-title">We plan your holiday. <em>You enjoy it.</em></h1>
+      <p class="hero-sub">Travel Thrive designs inbound, domestic and outbound journeys — with ticketing, hotels, visas, insurance and currency handled end to end.</p>
+      <div class="hero-actions">
+        <a href="contact.html" class="btn btn-primary">Start Planning</a>
+        <a href="packages.html" class="btn btn-ghost">Explore Packages</a>
+      </div>
+    </div>
+    <span class="hero-scroll">Scroll to explore</span>
+  </section>
+
+  <!-- ============================= 2. COMPANY INTRODUCTION ============================= -->
+  <section class="intro">
+    <div class="container intro-grid">
+      <div class="intro-text reveal">
+        <span class="eyebrow">Who We Are</span>
+        <h2 class="section-heading">A travel agency built on 25 years of trust.</h2>
+        <p class="section-lede">Travel Thrive is a full-service travel agency and tour operator, crafting inbound, domestic and outbound journeys for travellers who want the details handled with care — from tickets to itineraries.</p>
+
+        <div class="intro-stats">
+          <div>
+            <div class="stat-num"><span data-counter="25" data-suffix="+">0</span></div>
+            <div class="stat-label">Years of Service</div>
+          </div>
+          <div>
+            <div class="stat-num"><span data-counter="10" data-suffix="+">0</span></div>
+            <div class="stat-label">Core Services</div>
+          </div>
+          <div>
+            <div class="stat-num"><span data-counter="7" data-suffix="">0</span></div>
+            <div class="stat-label">Global Partners</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="intro-media reveal reveal-delay-1">
+        <img src="assets/pool-relax.jpg" alt="Tropical resort pool loungers framed by tall palm trees" loading="lazy" />
+        <div class="intro-media-badge">
+          <strong>Est. 2000</strong>
+          <span>Travel Agency &amp; Tour Operator</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= 3. TRUST & CREDIBILITY ============================= -->
+  <section class="trust">
+    <div class="container trust-grid">
+      <div class="trust-item reveal">
+        <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/></svg>
+        <h3>Established Since 2000</h3>
+        <p>Two and a half decades of planning journeys across India and abroad.</p>
+      </div>
+      <div class="trust-item reveal reveal-delay-1">
+        <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>
+        <h3>End-to-End Service</h3>
+        <p>Tickets, hotels, visas, insurance and currency — all under one roof.</p>
+      </div>
+      <div class="trust-item reveal reveal-delay-2">
+        <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+        <h3>Personal Attention</h3>
+        <p>Direct phone and WhatsApp access to your travel planner, always.</p>
+      </div>
+      <div class="trust-item reveal reveal-delay-3">
+        <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 10l9-6 9 6-9 6-9-6z"/><path d="M3 10v6l9 6 9-6v-6"/></svg>
+        <h3>Global Partnerships</h3>
+        <p>Working with IRCTC, Amadeus, MSC Cruises, Western Union and more.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= 4. SERVICE SHOWCASE ============================= -->
+  <section class="services">
+    <div class="container">
+      <div class="services-head reveal">
+        <div>
+          <span class="eyebrow">What We Offer</span>
+          <h2 class="section-heading">Every service your journey needs.</h2>
+        </div>
+        <p class="section-lede">From your first booking to your return ticket, Travel Thrive covers travel, transit and paperwork in full.</p>
+      </div>
+
+      <div class="services-showcase">
+        <a href="packages.html#inbound" class="service-card service-card--lg reveal">
+          <img src="assets/heritage-monument.jpg" alt="Visitors admiring the Taj Mahal beside its reflecting pool" loading="lazy" />
+          <div class="service-card-body">
+            <span class="tag">Inbound</span>
+            <h3>Inbound Travel Services</h3>
+            <p>Curated journeys across India for visiting travellers.</p>
+          </div>
+        </a>
+
+        <a href="packages.html#domestic" class="service-card service-card--md reveal reveal-delay-1">
+          <img src="assets/mountain-lake.jpg" alt="Traditional houseboat cruising through Kerala's backwaters" loading="lazy" />
+          <div class="service-card-body">
+            <span class="tag">Domestic</span>
+            <h3>Domestic Travel Services</h3>
+            <p>Explore every corner of the country, planned end to end.</p>
+          </div>
+        </a>
+
+        <a href="packages.html#outbound" class="service-card service-card--md reveal reveal-delay-2">
+          <img src="assets/mountain-range.jpg" alt="Wooden boat gliding across an alpine lake surrounded by mountains" loading="lazy" />
+          <div class="service-card-body">
+            <span class="tag">Outbound</span>
+            <h3>Outbound Travel Services</h3>
+            <p>International holidays crafted with local expertise.</p>
+          </div>
+        </a>
+
+        <a href="ticketing.html#air" class="service-card service-card--sm reveal">
+          <img src="assets/aircraft-wing.jpg" alt="Aircraft wing above clouds" loading="lazy" />
+          <div class="service-card-body">
+            <span class="tag">Ticketing</span>
+            <h3>Air Ticket Booking</h3>
+          </div>
+        </a>
+
+        <a href="ticketing.html#bus" class="service-card service-card--sm reveal reveal-delay-1">
+          <img src="assets/highway-road.jpg" alt="Bus terminal with a traveller wheeling luggage toward a waiting coach" loading="lazy" />
+          <div class="service-card-body">
+            <span class="tag">Ticketing</span>
+            <h3>Bus Ticket Booking</h3>
+          </div>
+        </a>
+
+        <a href="ticketing.html#train" class="service-card service-card--sm reveal reveal-delay-2">
+          <img src="assets/train-platform.jpg" alt="Passengers waiting beside a train on an Indian railway platform" loading="lazy" />
+          <div class="service-card-body">
+            <span class="tag">Ticketing</span>
+            <h3>Train Ticket Booking</h3>
+          </div>
+        </a>
+
+        <a href="packages.html" class="service-card service-card--sm reveal reveal-delay-3">
+          <img src="assets/luxury-hotel-room.jpg" alt="Overwater cabanas at a luxury resort pool at dusk" loading="lazy" />
+          <div class="service-card-body">
+            <span class="tag">Stay</span>
+            <h3>Hotel Booking</h3>
+          </div>
+        </a>
+
+        <a href="packages.html" class="service-card service-card--sm reveal">
+          <img src="assets/travel-documents.jpg" alt="Passport and travel essentials laid out poolside" loading="lazy" />
+          <div class="service-card-body">
+            <span class="tag">Documentation</span>
+            <h3>Visa Assistance</h3>
+          </div>
+        </a>
+
+        <a href="packages.html" class="service-card service-card--sm reveal reveal-delay-1">
+          <img src="assets/travel-suitcase.jpg" alt="Traveller carrying suitcases while departing on a trip" loading="lazy" />
+          <div class="service-card-body">
+            <span class="tag">Protection</span>
+            <h3>Travel Insurance</h3>
+          </div>
+        </a>
+
+        <a href="packages.html" class="service-card service-card--sm reveal reveal-delay-2">
+          <img src="assets/amsterdam-canal.jpg" alt="Assorted international currency notes" loading="lazy" />
+          <div class="service-card-body">
+            <span class="tag">Currency</span>
+            <h3>Money Exchange</h3>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= 5 & 6. TRAVEL CATEGORIES ============================= -->
+  <section class="categories">
+    <div class="container">
+      <div class="services-head reveal">
+        <div>
+          <span class="eyebrow">Travel Categories</span>
+          <h2 class="section-heading">Wherever you're headed, we've mapped it.</h2>
+        </div>
+      </div>
+
+      <div class="category-row reveal">
+        <div class="category-media">
+          <img src="assets/european-old-town.jpg" alt="Gondola passing beneath Venice's Rialto Bridge" loading="lazy" />
+        </div>
+        <div class="category-copy">
+          <span class="eyebrow">Outbound</span>
+          <h3>International holidays, planned locally.</h3>
+          <p>From visa paperwork to on-ground itineraries, our outbound desk manages every layer of your international trip.</p>
+          <a href="packages.html#outbound" class="btn btn-dark">View Outbound Services</a>
+        </div>
+      </div>
+
+      <div class="category-row reverse reveal">
+        <div class="category-media">
+          <img src="assets/city-street.jpg" alt="Bustling street market scene in Jaipur, India" loading="lazy" />
+        </div>
+        <div class="category-copy">
+          <span class="eyebrow">Domestic</span>
+          <h3>India, seen the way it should be.</h3>
+          <p>Hills, coasts, heritage cities and hidden corners — our domestic packages are built around how you like to travel.</p>
+          <a href="packages.html#domestic" class="btn btn-dark">View Domestic Services</a>
+        </div>
+      </div>
+
+      <div class="category-row reveal">
+        <div class="category-media">
+          <img src="assets/resort-pool.jpg" alt="Resort pool pavilion nestled among tropical limestone hills" loading="lazy" />
+        </div>
+        <div class="category-copy">
+          <span class="eyebrow">Inbound</span>
+          <h3>A warm welcome to India.</h3>
+          <p>For travellers visiting India, we design comfortable, well-paced journeys backed by local, on-ground support.</p>
+          <a href="packages.html#inbound" class="btn btn-dark">View Inbound Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= 7. WHY CHOOSE US ============================= -->
+  <section class="why">
+    <div class="container why-grid">
+      <div class="why-media reveal">
+        <img src="assets/hotel-concierge.jpg" alt="Hotel reception lobby with staff ready to assist guests" loading="lazy" />
+      </div>
+      <div class="reveal reveal-delay-1">
+        <span class="eyebrow">Why Choose Us</span>
+        <h2 class="section-heading">The details, handled.</h2>
+
+        <div class="why-list">
+          <div class="why-list-item">
+            <span class="why-num">01</span>
+            <div>
+              <h4>25 Years of Experience</h4>
+              <p>A travel agency, tour operator and tours &amp; travel company trusted since 2000.</p>
+            </div>
+          </div>
+          <div class="why-list-item">
+            <span class="why-num">02</span>
+            <div>
+              <h4>One Team, Every Service</h4>
+              <p>Ticketing, hotels, visas, insurance and currency exchange — no need to juggle vendors.</p>
+            </div>
+          </div>
+          <div class="why-list-item">
+            <span class="why-num">03</span>
+            <div>
+              <h4>Direct, Personal Access</h4>
+              <p>Speak to us by phone, email or WhatsApp — no call centres, no automated queues.</p>
+            </div>
+          </div>
+          <div class="why-list-item">
+            <span class="why-num">04</span>
+            <div>
+              <h4>Trusted Global Network</h4>
+              <p>Associated with IRCTC, Amadeus, MSC Cruises, Star Cruises, Western Union, MoneyGram and ETAA.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= 8. ABOUT TRAVEL THRIVE ============================= -->
+  <section class="about-teaser">
+    <div class="container about-teaser-inner">
+      <div class="reveal">
+        <span class="eyebrow">About Travel Thrive</span>
+        <h2 class="section-heading">Two and a half decades of planning holidays people actually enjoy.</h2>
+        <p class="section-lede">Travel Thrive has operated as a travel agency, tour operator and tours &amp; travel company since 2000 — built around one idea: travel should feel effortless for the traveller.</p>
+        <blockquote>"We plan your holiday. You enjoy it!"</blockquote>
+        <a href="about.html" class="btn btn-primary" style="margin-top: 2rem;">More About Us</a>
+      </div>
+      <div class="about-teaser-media reveal reveal-delay-1">
+        <img src="assets/venice-canal.jpg" alt="Iconic lakeside temple destination at golden hour" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= 9. PREMIUM TRAVEL GALLERY ============================= -->
+  <section class="gallery">
+    <div class="container">
+      <div class="services-head reveal">
+        <div>
+          <span class="eyebrow">Gallery</span>
+          <h2 class="section-heading">Moments from the journeys we've planned.</h2>
+        </div>
+      </div>
+
+      <div class="gallery-grid">
+        <figure class="gallery-item reveal"><img src="assets/mountain-road.jpg" alt="Hiker overlooking a misty green mountain valley" loading="lazy" /><figcaption>Mountain Escapes</figcaption></figure>
+        <figure class="gallery-item reveal reveal-delay-1"><img src="assets/coastal-cliff.jpg" alt="Dramatic coastline cliffs at sunset" loading="lazy" /><figcaption>Coastal Retreats</figcaption></figure>
+        <figure class="gallery-item reveal reveal-delay-2"><img src="assets/hero-coastline.jpg" alt="Sandy beach shoreline with turquoise waves at sunrise" loading="lazy" /><figcaption>Island Getaways</figcaption></figure>
+        <figure class="gallery-item reveal"><img src="assets/european-old-town.jpg" alt="Gondolas on a Venice canal beneath the Rialto Bridge" loading="lazy" /><figcaption>Cultural Journeys</figcaption></figure>
+        <figure class="gallery-item reveal reveal-delay-1"><img src="assets/luxury-hotel-room.jpg" alt="Overwater cabanas at a luxury resort pool at dusk" loading="lazy" /><figcaption>Premium Stays</figcaption></figure>
+        <figure class="gallery-item reveal reveal-delay-2"><img src="assets/mountain-lake.jpg" alt="Houseboat cruising through Kerala's backwaters" loading="lazy" /><figcaption>Nature Trails</figcaption></figure>
+        <figure class="gallery-item reveal"><img src="assets/city-street.jpg" alt="Street market scene in Jaipur, India" loading="lazy" /><figcaption>City Adventures</figcaption></figure>
+        <figure class="gallery-item reveal reveal-delay-1"><img src="assets/resort-pool.jpg" alt="Resort pool pavilion amid tropical limestone hills" loading="lazy" /><figcaption>Resort Living</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= 10. ASSOCIATED PARTNERS ============================= -->
+  <section class="partners">
+    <div class="container">
+      <div class="services-head reveal">
+        <div>
+          <span class="eyebrow">Associated With</span>
+          <h2 class="section-heading">Backed by trusted global networks.</h2>
+        </div>
+      </div>
+      <div class="partners-grid reveal">
+        <div class="partner-logo">Western Union</div>
+        <div class="partner-logo">MoneyGram</div>
+        <div class="partner-logo">IRCTC</div>
+        <div class="partner-logo">Amadeus</div>
+        <div class="partner-logo">MSC Cruises</div>
+        <div class="partner-logo">Star Cruises</div>
+        <div class="partner-logo">ETAA</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= 11. CONTACT ============================= -->
+  <section class="contact" id="contact">
+    <div class="container contact-grid">
+      <div class="contact-card reveal">
+        <div>
+          <span class="eyebrow" style="color: var(--color-gold-soft);">Get In Touch</span>
+          <h2 class="section-heading">Let's plan your next journey.</h2>
+        </div>
+
+        <ul class="contact-list">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 22s8-7.5 8-13a8 8 0 10-16 0c0 5.5 8 13 8 13z"/><circle cx="12" cy="9" r="3"/></svg>
+            <span>Shop No. 2, Old Market, Tilak Nagar, New Delhi – 110018</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.8 19.8 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.12.9.33 1.79.63 2.65a2 2 0 01-.45 2.11L8.09 9.68a16 16 0 006 6l1.2-1.2a2 2 0 012.11-.45c.86.3 1.75.51 2.65.63A2 2 0 0122 16.92z"/></svg>
+            <a href="tel:+919999687120">+91 99996 87120</a>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.8 19.8 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.12.9.33 1.79.63 2.65a2 2 0 01-.45 2.11L8.09 9.68a16 16 0 006 6l1.2-1.2a2 2 0 012.11-.45c.86.3 1.75.51 2.65.63A2 2 0 0122 16.92z"/></svg>
+            <a href="tel:+911145642929">+91 11 4564 2929</a>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg>
+            <a href="mailto:contact@travelthrive.com">contact@travelthrive.com</a>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18 14 14 0 010-18z"/></svg>
+            <span>www.travelthrive.com</span>
+          </li>
+        </ul>
+
+        <div class="contact-actions">
+          <a href="https://wa.me/919999687120" target="_blank" rel="noopener" class="btn btn-whatsapp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.1a8.1 8.1 0 01-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8.1 8.1 0 1112 20.1zm4.5-6.1c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1s-.6.8-.7.9-.3.2-.5.1a6.6 6.6 0 01-2-1.2 7.4 7.4 0 01-1.4-1.7c-.1-.2 0-.4.1-.5l.4-.4c.1-.1.2-.3.2-.4a.5.5 0 000-.5c-.1-.1-.5-1.3-.7-1.7-.2-.5-.4-.4-.5-.4h-.5a.9.9 0 00-.7.3 2.7 2.7 0 00-.8 2 4.7 4.7 0 001 2.5 10.8 10.8 0 004.1 3.6c.6.2 1 .4 1.4.5a3.3 3.3 0 001.5.1 2.5 2.5 0 001.6-1.1 2 2 0 00.1-1.1c-.1-.1-.2-.2-.4-.3z"/></svg>
+            WhatsApp Us
+          </a>
+          <a href="mailto:contact@travelthrive.com" class="btn btn-ghost" style="border-color: rgba(250,247,242,0.3); color: var(--color-warm-white);">Email Us</a>
+        </div>
+      </div>
+
+      <div class="contact-map reveal reveal-delay-1">
+        <iframe
+          title="Travel Thrive office location on Google Maps"
+          src="https://www.google.com/maps?q=Tilak+Nagar,+New+Delhi+110018&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          aria-label="Google Map showing Travel Thrive office in Tilak Nagar, New Delhi">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================= 12. PREMIUM FOOTER ============================= -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Travel<span>Thrive</span></div>
+        <p class="footer-tagline">"We plan your holiday. You enjoy it!" A travel agency and tour operator serving travellers since 2000.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="packages.html">Packages</a></li>
+          <li><a href="ticketing.html">Ticketing</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="packages.html#inbound">Inbound Travel</a></li>
+          <li><a href="packages.html#domestic">Domestic Travel</a></li>
+          <li><a href="packages.html#outbound">Outbound Travel</a></li>
+          <li><a href="ticketing.html#air">Air Ticketing</a></li>
+          <li><a href="ticketing.html#train">Train Ticketing</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li>Shop No. 2, Old Market, Tilak Nagar, New Delhi – 110018</li>
+          <li><a href="tel:+919999687120">+91 99996 87120</a></li>
+          <li><a href="tel:+911145642929">+91 11 4564 2929</a></li>
+          <li><a href="mailto:contact@travelthrive.com">contact@travelthrive.com</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>
+        &copy; <span id="year"></span> Travel Thrive. All rights reserved. &nbsp;|&nbsp;
+        <a href="terms.html">Terms &amp; Conditions</a> &nbsp;|&nbsp;
+        <a href="privacy.html">Privacy Policy</a> &nbsp;|&nbsp;
+        <a href="payment-security.html">Payment Security</a> &nbsp;|&nbsp;
+        <a href="cancellations.html">Cancellation Policy</a> &nbsp;|&nbsp;
+        <a href="quarantine.html">India Domestic Quarantine Rules</a>
+      </div>
+      <div class="footer-socials">
+        <a href="https://wa.me/919999687120" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2z"/></svg>
+        </a>
+        <a href="mailto:contact@travelthrive.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================= FLOATING / MOBILE STICKY ============================= -->
+<a href="https://wa.me/919999687120" target="_blank" rel="noopener" class="floating-whatsapp" aria-label="Chat with us on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2z"/></svg>
+</a>
+
+<div class="sticky-contact-bar">
+  <div class="container">
+    <a href="tel:+919999687120" class="call">Call Now</a>
+    <a href="https://wa.me/919999687120" target="_blank" rel="noopener" class="whatsapp">WhatsApp</a>
+  </div>
+</div>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="js/main.js"></script>
+</body>
+</html>

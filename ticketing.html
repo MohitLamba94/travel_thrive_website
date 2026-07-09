@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ticketing Services — Air, Bus &amp; Train | Travel Thrive</title>
+<meta name="description" content="Book air, bus and train tickets through Travel Thrive — a travel agency and tour operator since 2000, offering end-to-end ticketing support." />
+
+<!-- Google Fonts: Fraunces (display) + Manrope (sans) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;0,700;1,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<!-- ============================= NAVIGATION ============================= -->
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand">Travel<span>Thrive</span></a>
+
+    <nav class="main-nav" aria-label="Primary">
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li class="has-dropdown">
+          <a href="packages.html" class="nav-link">Packages
+            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <ul class="dropdown">
+            <li><a href="packages.html#inbound">Inbound Travel Services</a></li>
+            <li><a href="packages.html#domestic">Domestic Travel Services</a></li>
+            <li><a href="packages.html#outbound">Outbound Travel Services</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <a href="ticketing.html" class="nav-link is-active" aria-current="page">Ticketing
+            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <ul class="dropdown">
+            <li><a href="#air">Air Ticket Booking</a></li>
+            <li><a href="#bus">Bus Ticket Booking</a></li>
+            <li><a href="#train">Train Ticket Booking</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-cta">
+      <a href="tel:+919999687120" class="nav-phone">+91 99996 87120</a>
+      <a href="contact.html" class="btn btn-primary">Plan My Trip</a>
+    </div>
+
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============================= MOBILE NAV DRAWER ============================= -->
+<nav id="mobileNav" class="mobile-nav" aria-label="Mobile">
+  <ul class="mobile-nav-list">
+    <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+    <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
+    <li>
+      <button class="mobile-nav-link mobile-accordion-toggle" aria-expanded="false">
+        Packages
+        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="mobile-accordion-panel">
+        <ul>
+          <li><a href="packages.html#inbound">Inbound Travel Services</a></li>
+          <li><a href="packages.html#domestic">Domestic Travel Services</a></li>
+          <li><a href="packages.html#outbound">Outbound Travel Services</a></li>
+        </ul>
+      </div>
+    </li>
+    <li>
+      <button class="mobile-nav-link mobile-accordion-toggle is-active" aria-expanded="false">
+        Ticketing
+        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="mobile-accordion-panel">
+        <ul>
+          <li><a href="#air">Air Ticket Booking</a></li>
+          <li><a href="#bus">Bus Ticket Booking</a></li>
+          <li><a href="#train">Train Ticket Booking</a></li>
+        </ul>
+      </div>
+    </li>
+    <li><a href="contact.html" class="mobile-nav-link">Contact Us</a></li>
+  </ul>
+
+  <div class="mobile-nav-contact">
+    <a href="tel:+919999687120" class="btn btn-primary">Call +91 99996 87120</a>
+    <a href="https://wa.me/919999687120" target="_blank" rel="noopener" class="btn btn-whatsapp">Chat on WhatsApp</a>
+  </div>
+</nav>
+
+<main>
+
+  <!-- ============================= PAGE HERO ============================= -->
+  <section class="hero hero--page">
+    <div class="hero-media">
+      <img src="assets/aircraft-wing.jpg" alt="Aircraft wing above clouds during flight" />
+    </div>
+    <div class="hero-content container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> <span class="sep">/</span> <span>Ticketing</span>
+      </div>
+      <h1 class="hero-title">Every ticket, <em>one call away.</em></h1>
+      <p class="hero-sub">Air, bus and train tickets booked and managed by our team — so your journey starts without the hassle.</p>
+    </div>
+  </section>
+
+  <!-- ============================= INTRO ============================= -->
+  <section class="intro">
+    <div class="container">
+      <div class="intro-text reveal" style="max-width: 70ch;">
+        <span class="eyebrow">Ticketing Services</span>
+        <h2 class="section-heading">Booking made simple, for every mode of travel.</h2>
+        <p class="section-lede" style="margin-top: var(--space-sm);">Whether you're flying, taking the bus, or travelling by train, Travel Thrive handles the booking, schedules and confirmations — so you can focus on the trip itself.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= AIR / BUS / TRAIN ============================= -->
+  <section class="ticket-services">
+    <div class="container">
+
+      <div class="category-row reveal" id="air">
+        <div class="category-media">
+          <img src="assets/aircraft-wing.jpg" alt="Aircraft wing above clouds during flight" loading="lazy" />
+        </div>
+        <div class="category-copy">
+          <span class="eyebrow">Air Ticket Booking</span>
+          <h3>Domestic and international flights, booked right.</h3>
+          <p>We book domestic and international air tickets through trusted global distribution partners, including Amadeus, managing fares, schedules and confirmations on your behalf.</p>
+          <div class="hero-actions">
+            <a href="tel:+919999687120" class="btn btn-dark">Call to Book</a>
+            <a href="https://wa.me/919999687120" target="_blank" rel="noopener" class="btn btn-whatsapp">WhatsApp Us</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="category-row reverse reveal" id="bus">
+        <div class="category-media">
+          <img src="assets/highway-road.jpg" alt="Bus terminal with a traveller wheeling luggage toward a waiting coach" loading="lazy" />
+        </div>
+        <div class="category-copy">
+          <span class="eyebrow">Bus Ticket Booking</span>
+          <h3>Comfortable bus journeys across India.</h3>
+          <p>From overnight sleeper coaches to short intercity hops, we arrange bus tickets across major routes in India, handling seat selection and scheduling for a smooth trip.</p>
+          <div class="hero-actions">
+            <a href="tel:+919999687120" class="btn btn-dark">Call to Book</a>
+            <a href="https://wa.me/919999687120" target="_blank" rel="noopener" class="btn btn-whatsapp">WhatsApp Us</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="category-row reveal" id="train">
+        <div class="category-media">
+          <img src="assets/train-platform.jpg" alt="Passengers waiting beside a train on an Indian railway platform" loading="lazy" />
+        </div>
+        <div class="category-copy">
+          <span class="eyebrow">Train Ticket Booking</span>
+          <h3>Rail travel, booked through our IRCTC partnership.</h3>
+          <p>As an IRCTC-associated agency, we book train tickets and manage berth preferences and schedules, taking the effort out of planning your rail journey.</p>
+          <div class="hero-actions">
+            <a href="tel:+919999687120" class="btn btn-dark">Call to Book</a>
+            <a href="https://wa.me/919999687120" target="_blank" rel="noopener" class="btn btn-whatsapp">WhatsApp Us</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="ticket-note reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg>
+        <span>All ticketing is handled directly by our team over phone, email or WhatsApp — no online forms, no payment gateways.</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================= WHY BOOK WITH US ============================= -->
+  <section class="trust">
+    <div class="container trust-grid">
+      <div class="trust-item reveal">
+        <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg>
+        <h3>Real-Time Coordination</h3>
+        <p>We track schedules and confirmations closely, so you're always informed.</p>
+      </div>
+      <div class="trust-item reveal reveal-delay-1">
+        <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 10l9-6 9 6-9 6-9-6z"/><path d="M3 10v6l9 6 9-6v-6"/></svg>
+        <h3>Trusted Booking Partners</h3>
+        <p>Working with IRCTC and Amadeus for reliable, verified ticketing.</p>
+      </div>
+      <div class="trust-item reveal reveal-delay-2">
+        <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>
+        <h3>One Point of Contact</h3>
+        <p>A single team manages your air, bus and train bookings together.</p>
+      </div>
+      <div class="trust-item reveal reveal-delay-3">
+        <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/></svg>
+        <h3>25 Years of Experience</h3>
+        <p>A travel agency and tour operator trusted with tickets since 2000.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= CTA BAND ============================= -->
+  <section class="cta-band">
+    <div class="container cta-band-inner reveal">
+      <span class="eyebrow" style="color: var(--color-gold-soft);">Ready to Book?</span>
+      <h2 class="section-heading">Tell us your route. We'll handle the ticket.</h2>
+      <p class="section-lede">Call, email or WhatsApp us with your travel dates and we'll take it from there.</p>
+      <div class="cta-band-actions">
+        <a href="tel:+919999687120" class="btn btn-primary">Call +91 99996 87120</a>
+        <a href="https://wa.me/919999687120" target="_blank" rel="noopener" class="btn btn-whatsapp">WhatsApp Us</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================= PREMIUM FOOTER ============================= -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Travel<span>Thrive</span></div>
+        <p class="footer-tagline">"We plan your holiday. You enjoy it!" A travel agency and tour operator serving travellers since 2000.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="packages.html">Packages</a></li>
+          <li><a href="ticketing.html">Ticketing</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="packages.html#inbound">Inbound Travel</a></li>
+          <li><a href="packages.html#domestic">Domestic Travel</a></li>
+          <li><a href="packages.html#outbound">Outbound Travel</a></li>
+          <li><a href="ticketing.html#air">Air Ticketing</a></li>
+          <li><a href="ticketing.html#train">Train Ticketing</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li>Shop No. 2, Old Market, Tilak Nagar, New Delhi – 110018</li>
+          <li><a href="tel:+919999687120">+91 99996 87120</a></li>
+          <li><a href="tel:+911145642929">+91 11 4564 2929</a></li>
+          <li><a href="mailto:contact@travelthrive.com">contact@travelthrive.com</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>
+        &copy; <span id="year"></span> Travel Thrive. All rights reserved. &nbsp;|&nbsp;
+        <a href="terms.html">Terms &amp; Conditions</a> &nbsp;|&nbsp;
+        <a href="privacy.html">Privacy Policy</a> &nbsp;|&nbsp;
+        <a href="payment-security.html">Payment Security</a> &nbsp;|&nbsp;
+        <a href="cancellations.html">Cancellation Policy</a> &nbsp;|&nbsp;
+        <a href="quarantine.html">India Domestic Quarantine Rules</a>
+      </div>
+      <div class="footer-socials">
+        <a href="https://wa.me/919999687120" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2z"/></svg>
+        </a>
+        <a href="mailto:contact@travelthrive.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================= FLOATING / MOBILE STICKY ============================= -->
+<a href="https://wa.me/919999687120" target="_blank" rel="noopener" class="floating-whatsapp" aria-label="Chat with us on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2z"/></svg>
+</a>
+
+<div class="sticky-contact-bar">
+  <div class="container">
+    <a href="tel:+919999687120" class="call">Call Now</a>
+    <a href="https://wa.me/919999687120" target="_blank" rel="noopener" class="whatsapp">WhatsApp</a>
+  </div>
+</div>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="js/main.js"></script>
+</body>
+</html>
