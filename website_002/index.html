@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Thrive — We Plan Your Holiday. You Enjoy It!</title>
+    <meta name="description" content="Travel Thrive is a premier travel agency in New Delhi, offering inbound, domestic, and outbound travel services since 2000. Air tickets, visas, hotels, insurance & more.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        display: ['"Playfair Display"', 'serif'],
+                        body: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        accent: { DEFAULT: '#C49A6C', hover: '#B08050', light: '#F5EDE3', dark: '#8B6B3D' },
+                        dark: { DEFAULT: '#1A1A1A', soft: '#2A2A2A' },
+                        light: { DEFAULT: '#FAFAF8', alt: '#F3F1ED', card: '#FFFFFF' },
+                        trust: '#1A6B5C',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        html{scroll-behavior:smooth}
+        body{font-family:'Plus Jakarta Sans',sans-serif;color:#1A1A1A;background:#FAFAF8;overflow-x:hidden}
+        ::selection{background:#C49A6C;color:#fff}
+        ::-webkit-scrollbar{width:7px}
+        ::-webkit-scrollbar-track{background:#F3F1ED}
+        ::-webkit-scrollbar-thumb{background:#C49A6C;border-radius:4px}
+
+        /* Scroll reveal */
+        .reveal{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.22,1,.36,1),transform .8s cubic-bezier(.22,1,.36,1)}
+        .reveal.visible{opacity:1;transform:translateY(0)}
+        .reveal-d1{transition-delay:.1s}.reveal-d2{transition-delay:.2s}.reveal-d3{transition-delay:.3s}
+        .reveal-d4{transition-delay:.4s}.reveal-d5{transition-delay:.5s}
+
+        /* Hero */
+        @keyframes scrollPulse{0%,100%{opacity:1;transform:translateY(0)}50%{opacity:.4;transform:translateY(10px)}}
+        .scroll-indicator{animation:scrollPulse 2s ease-in-out infinite}
+
+        /* Dropdown */
+        .dropdown-menu{opacity:0;visibility:hidden;transform:translateY(8px);transition:all .25s cubic-bezier(.22,1,.36,1);pointer-events:none}
+        .dropdown:hover .dropdown-menu,.dropdown:focus-within .dropdown-menu{opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto}
+
+        /* Mobile menu */
+        .mobile-menu{transform:translateX(100%);transition:transform .4s cubic-bezier(.22,1,.36,1)}
+        .mobile-menu.open{transform:translateX(0)}
+        .mobile-overlay{opacity:0;visibility:hidden;transition:all .3s ease}
+        .mobile-overlay.open{opacity:1;visibility:visible}
+        .mobile-accordion-body{max-height:0;overflow:hidden;transition:max-height .35s ease}
+        .mobile-accordion-body.open{max-height:300px}
+
+        /* Service expand */
+        .service-expand{max-height:0;overflow:hidden;opacity:0;transition:max-height .4s cubic-bezier(.22,1,.36,1),opacity .3s ease}
+        .service-expand.active{max-height:200px;opacity:1}
+
+        /* Gallery */
+        .gallery-grid{display:grid;grid-template-columns:repeat(2,1fr);grid-auto-rows:180px;gap:12px}
+        @media(min-width:768px){.gallery-grid{grid-template-columns:repeat(3,1fr);grid-auto-rows:220px;gap:16px}.gallery-grid .g-tall{grid-row:span 2}}
+        @media(min-width:1024px){.gallery-grid{grid-template-columns:repeat(4,1fr);grid-auto-rows:240px;gap:20px}.gallery-grid .g-wide{grid-column:span 2}}
+        .gallery-item img{transition:transform .7s cubic-bezier(.22,1,.36,1)}
+        .gallery-item:hover img{transform:scale(1.08)}
+
+        /* Partners */
+        .partner-card{filter:grayscale(100%) opacity(.45);transition:all .35s ease}
+        .partner-card:hover{filter:grayscale(0%) opacity(1)}
+
+        /* Header scrolled */
+        .header-scrolled{background:rgba(255,255,255,.96)!important;backdrop-filter:blur(20px)!important;box-shadow:0 1px 24px rgba(0,0,0,.07)!important}
+        .header-scrolled .nav-link{color:#1A1A1A!important}
+        .header-scrolled .nav-link:hover{color:#C49A6C!important}
+        .header-scrolled .logo-text{color:#1A1A1A!important}
+        .header-scrolled .nav-cta{background:#C49A6C!important;color:#fff!important}
+        .header-scrolled .hamburger-line{background:#1A1A1A!important}
+
+        /* Back to top */
+        .back-to-top{opacity:0;visibility:hidden;transform:translateY(16px);transition:all .3s ease}
+        .back-to-top.visible{opacity:1;visibility:visible;transform:translateY(0)}
+
+        /* WhatsApp float */
+        @keyframes floatBtn{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+        .whatsapp-float{animation:floatBtn 3s ease-in-out infinite}
+
+        /* Focus */
+        a:focus-visible,button:focus-visible{outline:2px solid #C49A6C;outline-offset:3px;border-radius:4px}
+
+        /* Reduced motion */
+        @media(prefers-reduced-motion:reduce){
+            *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+            .reveal{opacity:1;transform:none}html{scroll-behavior:auto}
+        }
+    </style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" style="background:transparent">
+    <div class="max-w-screen-2xl mx-auto px-6 lg:px-10 xl:px-20">
+        <div class="flex items-center justify-between py-4 lg:py-5">
+
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-2.5 group" aria-label="Travel Thrive Home">
+                <div class="w-9 h-9 rounded-lg bg-accent flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                    <i data-lucide="compass" class="w-5 h-5 text-white"></i>
+                </div>
+                <span class="logo-text text-white font-display text-xl font-600 tracking-tight transition-colors duration-300">Travel Thrive</span>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden lg:flex items-center gap-1" aria-label="Main navigation">
+                <a href="#hero" class="nav-link text-white/90 hover:text-white text-xs font-semibold uppercase tracking-widest px-4 py-2 rounded-lg transition-colors duration-200">Home</a>
+                <a href="#about" class="nav-link text-white/90 hover:text-white text-xs font-semibold uppercase tracking-widest px-4 py-2 rounded-lg transition-colors duration-200">About Us</a>
+
+                <!-- Packages Dropdown -->
+                <div class="dropdown relative">
+                    <button class="nav-link text-white/90 hover:text-white text-xs font-semibold uppercase tracking-widest px-4 py-2 rounded-lg transition-colors duration-200 flex items-center gap-1.5" aria-expanded="false" aria-haspopup="true">
+                        Packages <i data-lucide="chevron-down" class="w-3.5 h-3.5"></i>
+                    </button>
+                    <div class="dropdown-menu absolute top-full left-0 pt-2 w-64">
+                        <div class="bg-white rounded-xl shadow-lg shadow-black/10 border border-stone-100 p-2">
+                            <a href="#service-inbound" class="flex items-center gap-3 px-4 py-3 rounded-lg text-sm text-stone-700 hover:bg-accent-light hover:text-accent-dark transition-colors">
+                                <i data-lucide="globe" class="w-4 h-4 text-accent"></i> In Bound Travel
+                            </a>
+                            <a href="#service-domestic" class="flex items-center gap-3 px-4 py-3 rounded-lg text-sm text-stone-700 hover:bg-accent-light hover:text-accent-dark transition-colors">
+                                <i data-lucide="map-pin" class="w-4 h-4 text-accent"></i> Domestic Travel
+                            </a>
+                            <a href="#service-outbound" class="flex items-center gap-3 px-4 py-3 rounded-lg text-sm text-stone-700 hover:bg-accent-light hover:text-accent-dark transition-colors">
+                                <i data-lucide="plane" class="w-4 h-4 text-accent"></i> Out Bound Travel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ticketing Dropdown -->
+                <div class="dropdown relative">
+                    <button class="nav-link text-white/90 hover:text-white text-xs font-semibold uppercase tracking-widest px-4 py-2 rounded-lg transition-colors duration-200 flex items-center gap-1.5" aria-expanded="false" aria-haspopup="true">
+                        Ticketing <i data-lucide="chevron-down" class="w-3.5 h-3.5"></i>
+                    </button>
+                    <div class="dropdown-menu absolute top-full left-0 pt-2 w-64">
+                        <div class="bg-white rounded-xl shadow-lg shadow-black/10 border border-stone-100 p-2">
+                            <a href="#service-air" class="flex items-center gap-3 px-4 py-3 rounded-lg text-sm text-stone-700 hover:bg-accent-light hover:text-accent-dark transition-colors">
+                                <i data-lucide="plane-takeoff" class="w-4 h-4 text-accent"></i> Air Ticket Booking
+                            </a>
+                            <a href="#service-bus" class="flex items-center gap-3 px-4 py-3 rounded-lg text-sm text-stone-700 hover:bg-accent-light hover:text-accent-dark transition-colors">
+                                <i data-lucide="bus" class="w-4 h-4 text-accent"></i> Bus Ticket Booking
+                            </a>
+                            <a href="#service-train" class="flex items-center gap-3 px-4 py-3 rounded-lg text-sm text-stone-700 hover:bg-accent-light hover:text-accent-dark transition-colors">
+                                <i data-lucide="train-front" class="w-4 h-4 text-accent"></i> Train Ticket Booking
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#contact" class="nav-link text-white/90 hover:text-white text-xs font-semibold uppercase tracking-widest px-4 py-2 rounded-lg transition-colors duration-200">Contact</a>
+            </nav>
+
+            <!-- Desktop CTA -->
+            <a href="tel:+919999687120" class="nav-cta hidden lg:inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/20 text-white text-xs font-bold uppercase tracking-widest px-6 py-3 rounded-lg hover:bg-white hover:text-dark transition-all duration-300">
+                <i data-lucide="phone" class="w-3.5 h-3.5"></i> Call Now
+            </a>
+
+            <!-- Mobile Hamburger -->
+            <button id="menuToggle" class="lg:hidden flex flex-col gap-1.5 p-2 -mr-2" aria-label="Open menu" aria-expanded="false">
+                <span class="hamburger-line block w-6 h-0.5 bg-white transition-all duration-300 origin-center"></span>
+                <span class="hamburger-line block w-6 h-0.5 bg-white transition-all duration-300"></span>
+                <span class="hamburger-line block w-4 h-0.5 bg-white transition-all duration-300 origin-center"></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- Mobile Overlay -->
+<div id="mobileOverlay" class="mobile-overlay fixed inset-0 bg-black/50 z-50 lg:hidden" aria-hidden="true"></div>
+
+<!-- Mobile Menu -->
+<div id="mobileMenu" class="mobile-menu fixed top-0 right-0 bottom-0 w-80 max-w-[85vw] bg-white z-50 lg:hidden overflow-y-auto" role="dialog" aria-label="Mobile navigation">
+    <div class="p-6">
+        <div class="flex items-center justify-between mb-8">
+            <span class="font-display text-lg font-600 text-dark">Travel Thrive</span>
+            <button id="menuClose" class="p-2 -mr-2 text-stone-500 hover:text-dark transition-colors" aria-label="Close menu">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+        </div>
+
+        <nav class="flex flex-col gap-1" aria-label="Mobile navigation">
+            <a href="#hero" class="mobile-nav-link px-4 py-3 text-sm font-semibold text-stone-800 hover:bg-accent-light hover:text-accent-dark rounded-lg transition-colors">Home</a>
+            <a href="#about" class="mobile-nav-link px-4 py-3 text-sm font-semibold text-stone-800 hover:bg-accent-light hover:text-accent-dark rounded-lg transition-colors">About Us</a>
+
+            <!-- Mobile Accordion: Packages -->
+            <div class="mobile-accordion">
+                <button class="mobile-accordion-toggle w-full flex items-center justify-between px-4 py-3 text-sm font-semibold text-stone-800 hover:bg-accent-light hover:text-accent-dark rounded-lg transition-colors" aria-expanded="false">
+                    Packages <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300"></i>
+                </button>
+                <div class="mobile-accordion-body pl-4">
+                    <a href="#service-inbound" class="mobile-nav-link block px-4 py-2.5 text-sm text-stone-600 hover:text-accent-dark rounded-lg transition-colors">In Bound Travel</a>
+                    <a href="#service-domestic" class="mobile-nav-link block px-4 py-2.5 text-sm text-stone-600 hover:text-accent-dark rounded-lg transition-colors">Domestic Travel</a>
+                    <a href="#service-outbound" class="mobile-nav-link block px-4 py-2.5 text-sm text-stone-600 hover:text-accent-dark rounded-lg transition-colors">Out Bound Travel</a>
+                </div>
+            </div>
+
+            <!-- Mobile Accordion: Ticketing -->
+            <div class="mobile-accordion">
+                <button class="mobile-accordion-toggle w-full flex items-center justify-between px-4 py-3 text-sm font-semibold text-stone-800 hover:bg-accent-light hover:text-accent-dark rounded-lg transition-colors" aria-expanded="false">
+                    Ticketing <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300"></i>
+                </button>
+                <div class="mobile-accordion-body pl-4">
+                    <a href="#service-air" class="mobile-nav-link block px-4 py-2.5 text-sm text-stone-600 hover:text-accent-dark rounded-lg transition-colors">Air Ticket Booking</a>
+                    <a href="#service-bus" class="mobile-nav-link block px-4 py-2.5 text-sm text-stone-600 hover:text-accent-dark rounded-lg transition-colors">Bus Ticket Booking</a>
+                    <a href="#service-train" class="mobile-nav-link block px-4 py-2.5 text-sm text-stone-600 hover:text-accent-dark rounded-lg transition-colors">Train Ticket Booking</a>
+                </div>
+            </div>
+
+            <a href="#contact" class="mobile-nav-link px-4 py-3 text-sm font-semibold text-stone-800 hover:bg-accent-light hover:text-accent-dark rounded-lg transition-colors">Contact Us</a>
+        </nav>
+
+        <div class="mt-8 pt-6 border-t border-stone-100">
+            <a href="tel:+919999687120" class="flex items-center gap-3 px-4 py-3 bg-accent text-white text-sm font-bold rounded-lg hover:bg-accent-hover transition-colors">
+                <i data-lucide="phone" class="w-4 h-4"></i> +91 9999687120
+            </a>
+            <a href="mailto:contact@travelthrive.com" class="flex items-center gap-3 px-4 py-3 mt-2 text-sm text-stone-600 hover:text-accent-dark transition-colors">
+                <i data-lucide="mail" class="w-4 h-4"></i> contact@travelthrive.com
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- ============ HERO ============ -->
+<section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <!-- Background Image -->
+    <div class="absolute inset-0">
+        <img src="https://picsum.photos/seed/luxury-travel-dest/1920/1080.jpg" alt="Beautiful travel destination" class="hero-bg w-full h-full object-cover" loading="eager">
+        <div class="absolute inset-0 bg-gradient-to-b from-dark/70 via-dark/50 to-dark/80"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-dark/40 to-transparent"></div>
+    </div>
+
+    <!-- Content -->
+    <div class="relative z-10 max-w-screen-2xl mx-auto px-6 lg:px-10 xl:px-20 w-full">
+        <div class="max-w-3xl">
+            <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full px-5 py-2 mb-8" style="animation:fadeUp .8s cubic-bezier(.22,1,.36,1) forwards;opacity:0">
+                <span class="w-2 h-2 bg-accent rounded-full"></span>
+                <span class="text-white/80 text-xs font-semibold uppercase tracking-widest">Trusted Since 2000</span>
+            </div>
+
+            <h1 class="font-display text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-500 leading-[0.95] tracking-tight mb-6" style="animation:fadeUp .8s .15s cubic-bezier(.22,1,.36,1) forwards;opacity:0">
+                We Plan Your<br>
+                <span class="text-accent italic">Holiday.</span><br>
+                You Enjoy It.
+            </h1>
+
+            <p class="text-white/70 text-base sm:text-lg font-light leading-relaxed max-w-lg mb-10" style="animation:fadeUp .8s .3s cubic-bezier(.22,1,.36,1) forwards;opacity:0">
+                Inbound, domestic & outbound travel services from New Delhi. Flights, visas, hotels, insurance, and curated tour packages — all under one roof.
+            </p>
+
+            <div class="flex flex-wrap gap-4" style="animation:fadeUp .8s .45s cubic-bezier(.22,1,.36,1) forwards;opacity:0">
+                <a href="#services" class="inline-flex items-center gap-2.5 bg-accent hover:bg-accent-hover text-white text-xs font-bold uppercase tracking-widest px-8 py-4 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-accent/25">
+                    Explore Services <i data-lucide="arrow-down" class="w-4 h-4"></i>
+                </a>
+                <a href="#contact" class="inline-flex items-center gap-2.5 bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white hover:text-dark text-white text-xs font-bold uppercase tracking-widest px-8 py-4 rounded-lg transition-all duration-300">
+                    Contact Us <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 scroll-indicator">
+        <div class="flex flex-col items-center gap-2">
+            <span class="text-white/40 text-[10px] uppercase tracking-[0.2em] font-semibold">Scroll</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-white/40"></i>
+        </div>
+    </div>
+</section>
+
+
+<!-- ============ TRUST BAND ============ -->
+<section class="relative z-10 -mt-16">
+    <div class="max-w-screen-2xl mx-auto px-6 lg:px-10 xl:px-20">
+        <div class="bg-white rounded-2xl shadow-xl shadow-black/5 border border-stone-100 p-6 md:p-8">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                <div class="reveal flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-accent-light flex items-center justify-center flex-shrink-0">
+                        <i data-lucide="calendar-check" class="w-5 h-5 text-accent-dark"></i>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-display font-600 text-dark">2000</div>
+                        <div class="text-xs text-stone-500 font-medium uppercase tracking-wider">Established</div>
+                    </div>
+                </div>
+                <div class="reveal reveal-d1 flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-accent-light flex items-center justify-center flex-shrink-0">
+                        <i data-lucide="layout-grid" class="w-5 h-5 text-accent-dark"></i>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-display font-600 text-dark">10+</div>
+                        <div class="text-xs text-stone-500 font-medium uppercase tracking-wider">Services</div>
+                    </div>
+                </div>
+                <div class="reveal reveal-d2 flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-accent-light flex items-center justify-center flex-shrink-0">
+                        <i data-lucide="award" class="w-5 h-5 text-accent-dark"></i>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-display font-600 text-dark">20+</div>
+                        <div class="text-xs text-stone-500 font-medium uppercase tracking-wider">Years Experience</div>
+                    </div>
+                </div>
+                <div class="reveal reveal-d3 flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-accent-light flex items-center justify-center flex-shrink-0">
+                        <i data-lucide="shield-check" class="w-5 h-5 text-accent-dark"></i>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-display font-600 text-dark">7</div>
+                        <div class="text-xs text-stone-500 font-medium uppercase tracking-wider">Trusted Partners</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ============ SERVICES ============ -->
+<section id="services" class="py-24 lg:py-32">
+    <div class="max-w-screen-2xl mx-auto px-6 lg:px-10 xl:px-20">
+
+        <!-- Section Header -->
+        <div class="max-w-2xl mb-16 lg:mb-20">
+            <span class="reveal inline-block text-accent text-xs font-bold uppercase tracking-[0.2em] mb-4">What We Offer</span>
+            <h2 class="reveal reveal-d1 font-display text-3xl sm:text-4xl lg:text-5xl font-500 text-dark leading-tight tracking-tight mb-5">
+                Complete Travel Solutions<br class="hidden sm:block"> Under One Roof
+            </h2>
+            <p class="reveal reveal-d2 text-stone-500 text-base lg:text-lg font-light leading-relaxed">
+                From curated tour packages to ticketing, visa assistance, and travel insurance — we handle every detail so you can focus on the journey.
+            </p>
+        </div>
+
+        <!-- Services Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 lg:gap-6">
+
+            <!-- 1. In Bound Travel -->
+            <div id="service-inbound" class="reveal service-card group bg-white rounded-2xl border border-stone-100 overflow-hidden hover:shadow-xl hover:shadow-black/5 hover:border-accent/20 transition-all duration-500">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="https://picsum.photos/seed/india-heritage/600/400.jpg" alt="Inbound travel in India" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark/40 to-transparent"></div>
+                    <div class="absolute top-4 left-4 w-10 h-10 rounded-lg bg-white/90 backdrop-blur-sm flex items-center justify-center">
+                        <i data-lucide="globe" class="w-5 h-5 text-accent-dark"></i>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-base font-bold text-dark mb-2">In Bound Travel Services</h3>
+                    <p class="text-sm text-stone-500 leading-relaxed mb-3">Curated itineraries for international travelers exploring India's diverse landscapes and heritage.</p>
+                    <button class="service-toggle flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-accent-dark hover:text-accent transition-colors" aria-expanded="false">
+                        Learn More <i data-lucide="chevron-down" class="w-3.5 h-3.5 transition-transform duration-300"></i>
+                    </button>
+                    <div class="service-expand">
+                        <p class="text-sm text-stone-500 leading-relaxed pt-3 border-t border-stone-100 mt-3">We craft immersive itineraries for international travelers exploring India's diverse landscapes, heritage sites, and vibrant culture. From the Taj Mahal to Kerala's backwaters, every journey is thoughtfully planned.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Domestic Travel -->
+            <div id="service-domestic" class="reveal reveal-d1 service-card group bg-white rounded-2xl border border-stone-100 overflow-hidden hover:shadow-xl hover:shadow-black/5 hover:border-accent/20 transition-all duration-500">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="https://picsum.photos/seed/india-mountains/600/400.jpg" alt="Domestic travel in India" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark/40 to-transparent"></div>
+                    <div class="absolute top-4 left-4 w-10 h-10 rounded-lg bg-white/90 backdrop-blur-sm flex items-center justify-center">
+                        <i data-lucide="map-pin" class="w-5 h-5 text-accent-dark"></i>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-base font-bold text-dark mb-2">Domestic Travel Services</h3>
+                    <p class="text-sm text-stone-500 leading-relaxed mb-3">From the Himalayas to coastal paradises — expertly planned domestic tour packages across India.</p>
+                    <button class="service-toggle flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-accent-dark hover:text-accent transition-colors" aria-expanded="false">
+                        Learn More <i data-lucide="chevron-down" class="w-3.5 h-3.5 transition-transform duration-300"></i>
+                    </button>
+                    <div class="service-expand">
+                        <p class="text-sm text-stone-500 leading-relaxed pt-3 border-t border-stone-100 mt-3">Discover India with our expertly planned domestic tour packages. Whether it's the snow-capped peaks of Ladakh, the beaches of Goa, or the temples of Tamil Nadu, we design journeys that match your interests and budget.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Out Bound Travel -->
+            <div id="service-outbound" class="reveal reveal-d2 service-card group bg-white rounded-2xl border border-stone-100 overflow-hidden hover:shadow-xl hover:shadow-black/5 hover:border-accent/20 transition-all duration-500">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="https://picsum.photos/seed/world-travel-city/600/400.jpg" alt="Outbound international travel" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark/40 to-transparent"></div>
+                    <div class="absolute top-4 left-4 w-10 h-10 rounded-lg bg-white/90 backdrop-blur-sm flex items-center justify-center">
+                        <i data-lucide="plane" class="w-5 h-5 text-accent-dark"></i>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-base font-bold text-dark mb-2">Out Bound Travel Services</h3>
+                    <p class="text-sm text-stone-500 leading-relaxed mb-3">Explore the world with confidence. We handle flights, visas, stays, and experiences abroad.</p>
+                    <button class="service-toggle flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-accent-dark hover:text-accent transition-colors" aria-expanded="false">
+                        Learn More <i data-lucide="chevron-down" class="w-3.5 h-3.5 transition-transform duration-300"></i>
+                    </button>
+                    <div class="service-expand">
+                        <p class="text-sm text-stone-500 leading-relaxed pt-3 border-t border-stone-100 mt-3">Explore the world with confidence. We manage every aspect of your international trip — from flight bookings and visa processing to hotel reservations and local experiences across global destinations.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Air Ticket Booking -->
+            <div id="service-air" class="reveal reveal-d3 service-card group bg-white rounded-2xl border border-stone-100 overflow-hidden hover:shadow-xl hover:shadow-black/5 hover:border-accent/20 transition-all duration-500">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="https://picsum.photos/seed/airplane-sky-clouds/600/400.jpg" alt="Air ticket booking" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark/40 to-transparent"></div>
+                    <div class="absolute top-4 left-4 w-10 h-10 rounded-lg bg-white/90 backdrop-blur-sm flex items-center justify-center">
+                        <i data-lucide="plane-takeoff" class="w-5 h-5 text-accent-dark"></i>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-base font-bold text-dark mb-2">Air Ticket Booking</h3>
+                    <p class="text-sm text-stone-500 leading-relaxed mb-3">Competitive fares across all major airlines for domestic and international flights.</p>
+                    <button class="service-toggle flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-accent-dark hover:text-accent transition-colors" aria-expanded="false">
+                        Learn More <i data-lucide="chevron-down" class="w-3.5 h-3.5 transition-transform duration-300"></i>
+                    </button>
+                    <div class="service-expand">
+                        <p class="text-sm text-stone-500 leading-relaxed pt-3 border-t border-stone-100 mt-3">Access competitive fares across all major domestic and international airlines. We compare options and secure the best deals for your travel dates, with flexible rebooking support.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. Bus Ticket Booking -->
+            <div id="service-bus" class="reveal service-card group bg-white rounded-2xl border border-stone-100 overflow-hidden hover:shadow-xl hover:shadow-black/5 hover:border-accent/20 transition-all duration-500">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="https://picsum.photos/seed/bus-road-journey/600/400.jpg" alt="Bus ticket booking" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark/40 to-transparent"></div>
+                    <div class="absolute top-4 left-4 w-10 h-10 rounded-lg bg-white/90 backdrop-blur-sm flex items-center justify-center">
+                        <i data-lucide="bus" class="w-5 h-5 text-accent-dark"></i>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-base font-bold text-dark mb-2">Bus Ticket Booking</h3>
+                    <p class="text-sm text-stone-500 leading-relaxed mb-3">Comfortable bus travel across India on premium and standard services nationwide.</p>
+                    <button class="service-toggle flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-accent-dark hover:text-accent transition-colors" aria-expanded="false">
+                        Learn More <i data-lucide="chevron-down" class="w-3.5 h-3.5 transition-transform duration-300"></i>
+                    </button>
+                    <div class="service-expand">
+                        <p class="text-sm text-stone-500 leading-relaxed pt-3 border-t border-stone-100 mt-3">We book tickets on a wide network of premium and standard bus services across India. Whether it's a short intercity trip or a long-distance journey, we find the right option for you.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. Train Ticket Booking -->
+            <div id="service-train" class="reveal reveal-d1 service-card group bg-white rounded-2xl border border-stone-100 overflow-hidden hover:shadow-xl hover:shadow-black/5 hover:border-accent/20 transition-all duration-500">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="https://picsum.photos/seed/indian-railway-train/600/400.jpg" alt="Train ticket booking" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark/40 to-transparent"></div>
+                    <div class="absolute top-4 left-4 w-10 h-10 rounded-lg bg-white/90 backdrop-blur-sm flex items-center justify-center">
+                        <i data-lucide="train-front" class="w-5 h-5 text-accent-dark"></i>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-base font-bold text-dark mb-2">Train Ticket Booking</h3>
+                    <p class="text-sm text-stone-500 leading-relaxed mb-3">Authorized IRCTC booking — secure seats on India's vast railway network.</p>
+                    <button class="service-toggle flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-accent-dark hover:text-accent transition-colors" aria-expanded="false">
+                        Learn More <i data-lucide="chevron-down" class="w-3.5 h-3.5 transition-transform duration-300"></i>
+                    </button>
+                    <div class="service-expand">
+                        <p class="text-sm text-stone-500 leading-relaxed pt-3 border-t border-stone-100 mt-3">As an authorized IRCTC partner, we help you secure confirmed seats on India's extensive railway network. From sleeper class to AC first class, we handle the booking complexity for you.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7. Visa Assistance -->
+            <div class="reveal reveal-d2 service-card group bg-white rounded-2xl border border-stone-100 overflow-hidden hover:shadow-xl hover:shadow-black/5 hover:border-accent/20 transition-all duration-500">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="https://picsum.photos/seed/passport-visa-stamp/600/400.jpg" alt="Visa assistance" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark/40 to-transparent"></div>
+                    <div class="absolute top-4 left-4 w-10 h-10 rounded-lg bg-white/90 backdrop-blur-sm flex items-center justify-center">
+                        <i data-lucide="stamp" class="w-5 h-5 text-accent-dark"></i>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-base font-bold text-dark mb-2">Visa Assistance</h3>
+                    <p class="text-sm text-stone-500 leading-relaxed mb-3">Expert guidance on documentation and applications for multiple countries.</p>
+                    <button class="service-toggle flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-accent-dark hover:text-accent transition-colors" aria-expanded="false">
+                        Learn More <i data-lucide="chevron-down" class="w-3.5 h-3.5 transition-transform duration-300"></i>
+                    </button>
+                    <div class="service-expand">
+                        <p class="text-sm text-stone-500 leading-relaxed pt-3 border-t border-stone-100 mt-3">Simplify the visa process with our expert guidance. We assist with documentation, form filling, and application submission for tourist, business, and transit visas across multiple countries.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 8. Travel Insurance -->
+            <div class="reveal reveal-d3 service-card group bg-white rounded-2xl border border-stone-100 overflow-hidden hover:shadow-xl hover:shadow-black/5 hover:border-accent/20 transition-all duration-500">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="https://picsum.photos/seed/travel-safety-shield/600/400.jpg" alt="Travel insurance" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark/40 to-transparent"></div>
+                    <div class="absolute top-4 left-4 w-10 h-10 rounded-lg bg-white/90 backdrop-blur-sm flex items-center justify-center">
+                        <i data-lucide="shield" class="w-5 h-5 text-accent-dark"></i>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-base font-bold text-dark mb-2">Travel Insurance</h3>
+                    <p class="text-sm text-stone-500 leading-relaxed mb-3">Comprehensive coverage for medical emergencies, trip cancellations, and more.</p>
+                    <button class="service-toggle flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-accent-dark hover:text-accent transition-colors" aria-expanded="false">
+                        Learn More <i data-lucide="chevron-down" class="w-3.5 h-3.5 transition-transform duration-300"></i>
+                    </button>
+                    <div class="service-expand">
+                        <p class="text-sm text-stone-500 leading-relaxed pt-3 border-t border-stone-100 mt-3">Travel with peace of mind. We offer comprehensive travel insurance plans covering medical emergencies, trip cancellations, baggage loss, and travel delays for both domestic and international trips.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 9. Money Exchange -->
+            <div class="reveal service-card group bg-white rounded-2xl border border-stone-100 overflow-hidden hover:shadow-xl hover:shadow-black/5 hover:border-accent/20 transition-all duration-500">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="https://picsum.photos/seed/currency-exchange-money/600/400.jpg" alt="Money exchange service" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark/40 to-transparent"></div>
+                    <div class="absolute top-4 left-4 w-10 h-10 rounded-lg bg-white/90 backdrop-blur-sm flex items-center justify-center">
+                        <i data-lucide="banknote" class="w-5 h-5 text-accent-dark"></i>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-base font-bold text-dark mb-2">Money Exchange</h3>
+                    <p class="text-sm text-stone-500 leading-relaxed mb-3">Competitive foreign exchange rates for hassle-free currency conversion.</p>
+                    <button class="service-toggle flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-accent-dark hover:text-accent transition-colors" aria-expanded="false">
+                        Learn More <i data-lucide="chevron-down" class="w-3.5 h-3.5 transition-transform duration-300"></i>
+                    </button>
+                    <div class="service-expand">
+                        <p class="text-sm text-stone-500 leading-relaxed pt-3 border-t border-stone-100 mt-3">Get competitive foreign exchange rates for all major currencies. We facilitate hassle-free currency exchange for your international trips, with both cash and card-based options available.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 10. Hotel -->
+            <div class="reveal reveal-d1 service-card group bg-white rounded-2xl border border-stone-100 overflow-hidden hover:shadow-xl hover:shadow-black/5 hover:border-accent/20 transition-all duration-500">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="https://picsum.photos/seed/luxury-hotel-resort/600/400.jpg" alt="Hotel booking" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark/40 to-transparent"></div>
+                    <div class="absolute top-4 left-4 w-10 h-10 rounded-lg bg-white/90 backdrop-blur-sm flex items-center justify-center">
+                        <i data-lucide="building-2" class="w-5 h-5 text-accent-dark"></i>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-base font-bold text-dark mb-2">Hotel Booking</h3>
+                    <p class="text-sm text-stone-500 leading-relaxed mb-3">From budget stays to luxury resorts — accommodations worldwide to suit every preference.</p>
+                    <button class="service-toggle flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-accent-dark hover:text-accent transition-colors" aria-expanded="false">
+                        Learn More <i data-lucide="chevron-down" class="w-3.5 h-3.5 transition-transform duration-300"></i>
+                    </button>
+                    <div class="service-expand">
+                        <p class="text-sm text-stone-500 leading-relaxed pt-3 border-t border-stone-100 mt-3">From budget-friendly stays to five-star luxury resorts, we book accommodations worldwide to suit your preferences and budget. Access exclusive rates across thousands of properties in India and abroad.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="py-24 lg:py-32 bg-light-alt">
+    <div class="max-w-screen-2xl mx-auto px-6 lg:px-10 xl:px-20">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+            <!-- Image Side -->
+            <div class="reveal relative">
+                <div class="relative rounded-2xl overflow-hidden shadow-2xl shadow-black/10">
+                    <img src="https://picsum.photos/seed/travel-agency-team/800/600.jpg" alt="Travel Thrive team" class="w-full h-[400px] lg:h-[520px] object-cover" loading="lazy">
+                </div>
+                <!-- Floating accent card -->
+                <div class="absolute -bottom-6 -right-4 lg:-right-8 bg-accent text-white rounded-xl p-5 shadow-xl shadow-accent/20 max-w-[220px]">
+                    <div class="text-3xl font-display font-600 mb-1">20+</div>
+                    <div class="text-sm font-light leading-snug opacity-90">Years of trusted travel expertise</div>
+                </div>
+                <!-- Decorative border -->
+                <div class="absolute -top-4 -left-4 w-24 h-24 border-t-2 border-l-2 border-accent/30 rounded-tl-2xl pointer-events-none"></div>
+            </div>
+
+            <!-- Text Side -->
+            <div>
+                <span class="reveal inline-block text-accent text-xs font-bold uppercase tracking-[0.2em] mb-4">About Us</span>
+                <h2 class="reveal reveal-d1 font-display text-3xl sm:text-4xl lg:text-5xl font-500 text-dark leading-tight tracking-tight mb-6">
+                    Your Trusted Travel<br>Partner Since 2000
+                </h2>
+                <div class="space-y-4">
+                    <p class="reveal reveal-d2 text-stone-600 text-base leading-relaxed">
+                        Travel Thrive is a travel agency and tour operator based in New Delhi, India. For over two decades, we have been helping travelers discover the world — from the vibrant streets of India to international destinations across the globe.
+                    </p>
+                    <p class="reveal reveal-d3 text-stone-600 text-base leading-relaxed">
+                        We provide inbound, domestic, and outbound travel services with customized solutions for individuals and groups. Our emphasis has always been on professional service, affordable pricing, and customer satisfaction.
+                    </p>
+                </div>
+
+                <!-- Value props -->
+                <div class="reveal reveal-d4 grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
+                    <div class="flex items-start gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-accent-light flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <i data-lucide="check" class="w-4 h-4 text-accent-dark"></i>
+                        </div>
+                        <span class="text-sm font-medium text-stone-700">Professional Service</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-accent-light flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <i data-lucide="check" class="w-4 h-4 text-accent-dark"></i>
+                        </div>
+                        <span class="text-sm font-medium text-stone-700">Affordable Pricing</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-accent-light flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <i data-lucide="check" class="w-4 h-4 text-accent-dark"></i>
+                        </div>
+                        <span class="text-sm font-medium text-stone-700">Customized Solutions</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-accent-light flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <i data-lucide="check" class="w-4 h-4 text-accent-dark"></i>
+                        </div>
+                        <span class="text-sm font-medium text-stone-700">Customer Satisfaction</span>
+                    </div>
+                </div>
+
+                <div class="reveal reveal-d5 mt-10">
+                    <a href="#contact" class="inline-flex items-center gap-2.5 bg-dark hover:bg-dark-soft text-white text-xs font-bold uppercase tracking-widest px-8 py-4 rounded-lg transition-all duration-300 hover:shadow-lg">
+                        Get In Touch <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ============ GALLERY ============ -->
+<section id="gallery" class="py-24 lg:py-32">
+    <div class="max-w-screen-2xl mx-auto px-6 lg:px-10 xl:px-20">
+
+        <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12 lg:mb-16">
+            <div>
+                <span class="reveal inline-block text-accent text-xs font-bold uppercase tracking-[0.2em] mb-4">Gallery</span>
+                <h2 class="reveal reveal-d1 font-display text-3xl sm:text-4xl lg:text-5xl font-500 text-dark leading-tight tracking-tight">
+                    Moments Worth<br class="hidden sm:block"> Traveling For
+                </h2>
+            </div>
+            <p class="reveal reveal-d2 text-stone-500 text-sm max-w-sm leading-relaxed">
+                A glimpse into the destinations and experiences that await you through Travel Thrive.
+            </p>
+        </div>
+
+        <div class="gallery-grid reveal">
+            <div class="gallery-item g-tall rounded-xl overflow-hidden cursor-pointer relative group">
+                <img src="https://picsum.photos/seed/tropical-beach-palm/600/900.jpg" alt="Tropical beach destination" class="w-full h-full object-cover" loading="lazy">
+                <div class="absolute inset-0 bg-gradient-to-t from-dark/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-5">
+                    <span class="text-white text-sm font-medium">Beach Paradise</span>
+                </div>
+            </div>
+            <div class="gallery-item rounded-xl overflow-hidden cursor-pointer relative group">
+                <img src="https://picsum.photos/seed/mountain-peak-snow/600/400.jpg" alt="Mountain landscape" class="w-full h-full object-cover" loading="lazy">
+                <div class="absolute inset-0 bg-gradient-to-t from-dark/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-5">
+                    <span class="text-white text-sm font-medium">Mountain Adventures</span>
+                </div>
+            </div>
+            <div class="gallery-item g-tall rounded-xl overflow-hidden cursor-pointer relative group">
+                <img src="https://picsum.photos/seed/ancient-temple-arch/600/900.jpg" alt="Heritage architecture" class="w-full h-full object-cover" loading="lazy">
+                <div class="absolute inset-0 bg-gradient-to-t from-dark/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-5">
+                    <span class="text-white text-sm font-medium">Heritage & Culture</span>
+                </div>
+            </div>
+            <div class="gallery-item g-wide rounded-xl overflow-hidden cursor-pointer relative group">
+                <img src="https://picsum.photos/seed/desert-sunset-camel/1200/400.jpg" alt="Desert sunset" class="w-full h-full object-cover" loading="lazy">
+                <div class="absolute inset-0 bg-gradient-to-t from-dark/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-5">
+                    <span class="text-white text-sm font-medium">Desert Expeditions</span>
+                </div>
+            </div>
+            <div class="gallery-item rounded-xl overflow-hidden cursor-pointer relative group">
+                <img src="https://picsum.photos/seed/wildlife-safari-nature/600/400.jpg" alt="Wildlife safari" class="w-full h-full object-cover" loading="lazy">
+                <div class="absolute inset-0 bg-gradient-to-t from-dark/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-5">
+                    <span class="text-white text-sm font-medium">Wildlife Safaris</span>
+                </div>
+            </div>
+            <div class="gallery-item rounded-xl overflow-hidden cursor-pointer relative group">
+                <img src="https://picsum.photos/seed/city-skyline-night/600/400.jpg" alt="City skyline" class="w-full h-full object-cover" loading="lazy">
+                <div class="absolute inset-0 bg-gradient-to-t from-dark/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-5">
+                    <span class="text-white text-sm font-medium">City Explorations</span>
+                </div>
+            </div>
+            <div class="gallery-item rounded-xl overflow-hidden cursor-pointer relative group">
+                <img src="https://picsum.photos/seed/lake-boat-serene/600/400.jpg" alt="Serene lake" class="w-full h-full object-cover" loading="lazy">
+                <div class="absolute inset-0 bg-gradient-to-t from-dark/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-5">
+                    <span class="text-white text-sm font-medium">Tranquil Getaways</span>
+                </div>
+            </div>
+            <div class="gallery-item rounded-xl overflow-hidden cursor-pointer relative group">
+                <img src="https://picsum.photos/seed/cruise-ship-ocean/600/400.jpg" alt="Cruise experience" class="w-full h-full object-cover" loading="lazy">
+                <div class="absolute inset-0 bg-gradient-to-t from-dark/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-5">
+                    <span class="text-white text-sm font-medium">Cruise Journeys</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ============ PARTNERS ============ -->
+<section id="partners" class="py-20 lg:py-24 bg-dark">
+    <div class="max-w-screen-2xl mx-auto px-6 lg:px-10 xl:px-20">
+        <div class="text-center mb-12 lg:mb-16">
+            <span class="reveal inline-block text-accent text-xs font-bold uppercase tracking-[0.2em] mb-4">Our Partners</span>
+            <h2 class="reveal reveal-d1 font-display text-2xl sm:text-3xl lg:text-4xl font-500 text-white leading-tight tracking-tight">
+                Associated With Industry Leaders
+            </h2>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-4 lg:gap-5">
+            <div class="reveal partner-card bg-white/5 border border-white/10 rounded-xl p-5 flex flex-col items-center text-center hover:bg-white/10 transition-all duration-300">
+                <i data-lucide="circle-dollar-sign" class="w-7 h-7 text-accent mb-3"></i>
+                <span class="text-white text-xs font-bold uppercase tracking-wider leading-tight">Western Union</span>
+                <span class="text-white/40 text-[10px] mt-1.5 leading-tight">Money Transfer</span>
+            </div>
+            <div class="reveal reveal-d1 partner-card bg-white/5 border border-white/10 rounded-xl p-5 flex flex-col items-center text-center hover:bg-white/10 transition-all duration-300">
+                <i data-lucide="train-front" class="w-7 h-7 text-accent mb-3"></i>
+                <span class="text-white text-xs font-bold uppercase tracking-wider leading-tight">IRCTC</span>
+                <span class="text-white/40 text-[10px] mt-1.5 leading-tight">Railway Tourism</span>
+            </div>
+            <div class="reveal reveal-d2 partner-card bg-white/5 border border-white/10 rounded-xl p-5 flex flex-col items-center text-center hover:bg-white/10 transition-all duration-300">
+                <i data-lucide="monitor" class="w-7 h-7 text-accent mb-3"></i>
+                <span class="text-white text-xs font-bold uppercase tracking-wider leading-tight">Amadeus</span>
+                <span class="text-white/40 text-[10px] mt-1.5 leading-tight">Global GDS</span>
+            </div>
+            <div class="reveal reveal-d3 partner-card bg-white/5 border border-white/10 rounded-xl p-5 flex flex-col items-center text-center hover:bg-white/10 transition-all duration-300">
+                <i data-lucide="ship" class="w-7 h-7 text-accent mb-3"></i>
+                <span class="text-white text-xs font-bold uppercase tracking-wider leading-tight">MSC Cruises</span>
+                <span class="text-white/40 text-[10px] mt-1.5 leading-tight">Cruise Line</span>
+            </div>
+            <div class="reveal reveal-d4 partner-card bg-white/5 border border-white/10 rounded-xl p-5 flex flex-col items-center text-center hover:bg-white/10 transition-all duration-300">
+                <i data-lucide="banknote" class="w-7 h-7 text-accent mb-3"></i>
+                <span class="text-white text-xs font-bold uppercase tracking-wider leading-tight">MoneyGram</span>
+                <span class="text-white/40 text-[10px] mt-1.5 leading-tight">Money Transfer</span>
+            </div>
+            <div class="reveal reveal-d5 partner-card bg-white/5 border border-white/10 rounded-xl p-5 flex flex-col items-center text-center hover:bg-white/10 transition-all duration-300">
+                <i data-lucide="users" class="w-7 h-7 text-accent mb-3"></i>
+                <span class="text-white text-xs font-bold uppercase tracking-wider leading-tight">ETAA</span>
+                <span class="text-white/40 text-[10px] mt-1.5 leading-tight">Travel Agents Assoc.</span>
+            </div>
+            <div class="reveal reveal-d5 partner-card bg-white/5 border border-white/10 rounded-xl p-5 flex flex-col items-center text-center hover:bg-white/10 transition-all duration-300 col-span-2 sm:col-span-1">
+                <i data-lucide="anchor" class="w-7 h-7 text-accent mb-3"></i>
+                <span class="text-white text-xs font-bold uppercase tracking-wider leading-tight">Star Cruises</span>
+                <span class="text-white/40 text-[10px] mt-1.5 leading-tight">Cruise Line</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="py-24 lg:py-32">
+    <div class="max-w-screen-2xl mx-auto px-6 lg:px-10 xl:px-20">
+
+        <div class="text-center max-w-2xl mx-auto mb-16 lg:mb-20">
+            <span class="reveal inline-block text-accent text-xs font-bold uppercase tracking-[0.2em] mb-4">Contact Us</span>
+            <h2 class="reveal reveal-d1 font-display text-3xl sm:text-4xl lg:text-5xl font-500 text-dark leading-tight tracking-tight mb-5">
+                Ready to Plan Your Next Trip?
+            </h2>
+            <p class="reveal reveal-d2 text-stone-500 text-base lg:text-lg font-light leading-relaxed">
+                Visit our office, give us a call, or send us an email. Our team is ready to help you craft the perfect travel experience.
+            </p>
+        </div>
+
+        <div class="grid lg:grid-cols-5 gap-8 lg:gap-10">
+
+            <!-- Contact Cards -->
+            <div class="lg:col-span-2 space-y-5">
+                <!-- Address -->
+                <div class="reveal bg-white rounded-2xl border border-stone-100 p-6 hover:shadow-lg hover:shadow-black/5 transition-all duration-300">
+                    <div class="flex items-start gap-4">
+                        <div class="w-11 h-11 rounded-xl bg-accent-light flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-accent-dark"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-sm font-bold text-dark mb-1.5">Office Address</h3>
+                            <p class="text-sm text-stone-500 leading-relaxed">Shop No. 2, Old Market,<br>Tilak Nagar, New Delhi – 110018</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phone -->
+                <div class="reveal reveal-d1 bg-white rounded-2xl border border-stone-100 p-6 hover:shadow-lg hover:shadow-black/5 transition-all duration-300">
+                    <div class="flex items-start gap-4">
+                        <div class="w-11 h-11 rounded-xl bg-accent-light flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="phone" class="w-5 h-5 text-accent-dark"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-sm font-bold text-dark mb-1.5">Phone</h3>
+                            <a href="tel:+919999687120" class="block text-sm text-stone-500 hover:text-accent-dark transition-colors">+91 9999687120</a>
+                            <a href="tel:+911145642929" class="block text-sm text-stone-500 hover:text-accent-dark transition-colors">+91 11 45642929</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="reveal reveal-d2 bg-white rounded-2xl border border-stone-100 p-6 hover:shadow-lg hover:shadow-black/5 transition-all duration-300">
+                    <div class="flex items-start gap-4">
+                        <div class="w-11 h-11 rounded-xl bg-accent-light flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="mail" class="w-5 h-5 text-accent-dark"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-sm font-bold text-dark mb-1.5">Email</h3>
+                            <a href="mailto:contact@travelthrive.com" class="text-sm text-stone-500 hover:text-accent-dark transition-colors">contact@travelthrive.com</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Website & Hours -->
+                <div class="reveal reveal-d3 bg-white rounded-2xl border border-stone-100 p-6 hover:shadow-lg hover:shadow-black/5 transition-all duration-300">
+                    <div class="flex items-start gap-4">
+                        <div class="w-11 h-11 rounded-xl bg-accent-light flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="clock" class="w-5 h-5 text-accent-dark"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-sm font-bold text-dark mb-1.5">Business Hours</h3>
+                            <p class="text-sm text-stone-500 leading-relaxed">Monday – Saturday<br>9:00 AM – 7:00 PM IST</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Google Map -->
+            <div class="reveal lg:col-span-3 rounded-2xl overflow-hidden border border-stone-100 shadow-lg shadow-black/5 min-h-[400px] lg:min-h-0">
+                <iframe
+                    src="https://maps.google.com/maps?q=Tilak+Nagar+New+Delhi+110018+India&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                    width="100%"
+                    height="100%"
+                    style="border:0; min-height:400px;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Travel Thrive office location on Google Maps"
+                ></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-dark text-white">
+    <div class="max-w-screen-2xl mx-auto px-6 lg:px-10 xl:px-20">
+
+        <!-- Main Footer -->
+        <div class="py-16 lg:py-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
+
+            <!-- Brand Column -->
+            <div class="sm:col-span-2 lg:col-span-1">
+                <a href="#" class="flex items-center gap-2.5 mb-5">
+                    <div class="w-9 h-9 rounded-lg bg-accent flex items-center justify-center">
+                        <i data-lucide="compass" class="w-5 h-5 text-white"></i>
+                    </div>
+                    <span class="font-display text-xl font-500 tracking-tight">Travel Thrive</span>
+                </a>
+                <p class="text-white/50 text-sm leading-relaxed mb-6 max-w-xs">
+                    Your trusted travel partner in New Delhi since 2000. We plan your holiday, you enjoy it.
+                </p>
+                <div class="flex items-center gap-3">
+                    <a href="https://wa.me/919999687120" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center hover:bg-accent hover:border-accent transition-all duration-300" aria-label="WhatsApp">
+                        <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    </a>
+                    <a href="mailto:contact@travelthrive.com" class="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center hover:bg-accent hover:border-accent transition-all duration-300" aria-label="Email">
+                        <i data-lucide="mail" class="w-4 h-4"></i>
+                    </a>
+                    <a href="tel:+919999687120" class="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center hover:bg-accent hover:border-accent transition-all duration-300" aria-label="Phone">
+                        <i data-lucide="phone" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 class="text-xs font-bold uppercase tracking-[0.15em] text-white/80 mb-5">Quick Links</h4>
+                <nav class="flex flex-col gap-3" aria-label="Footer quick links">
+                    <a href="#hero" class="text-sm text-white/50 hover:text-accent transition-colors duration-200">Home</a>
+                    <a href="#about" class="text-sm text-white/50 hover:text-accent transition-colors duration-200">About Us</a>
+                    <a href="#services" class="text-sm text-white/50 hover:text-accent transition-colors duration-200">Services</a>
+                    <a href="#gallery" class="text-sm text-white/50 hover:text-accent transition-colors duration-200">Gallery</a>
+                    <a href="#contact" class="text-sm text-white/50 hover:text-accent transition-colors duration-200">Contact Us</a>
+                </nav>
+            </div>
+
+            <!-- Services -->
+            <div>
+                <h4 class="text-xs font-bold uppercase tracking-[0.15em] text-white/80 mb-5">Services</h4>
+                <nav class="flex flex-col gap-3" aria-label="Footer services links">
+                    <a href="#service-inbound" class="text-sm text-white/50 hover:text-accent transition-colors duration-200">In Bound Travel</a>
+                    <a href="#service-domestic" class="text-sm text-white/50 hover:text-accent transition-colors duration-200">Domestic Travel</a>
+                    <a href="#service-outbound" class="text-sm text-white/50 hover:text-accent transition-colors duration-200">Out Bound Travel</a>
+                    <a href="#service-air" class="text-sm text-white/50 hover:text-accent transition-colors duration-200">Air Ticketing</a>
+                    <a href="#service-bus" class="text-sm text-white/50 hover:text-accent transition-colors duration-200">Bus Ticketing</a>
+                    <a href="#service-train" class="text-sm text-white/50 hover:text-accent transition-colors duration-200">Train Ticketing</a>
+                </nav>
+            </div>
+
+            <!-- Policies -->
+            <div>
+                <h4 class="text-xs font-bold uppercase tracking-[0.15em] text-white/80 mb-5">Policies</h4>
+                <nav class="flex flex-col gap-3" aria-label="Footer policy links">
+                    <a href="#" class="text-sm text-white/50 hover:text-accent transition-colors duration-200">Terms and Conditions</a>
+                    <a href="#" class="text-sm text-white/50 hover:text-accent transition-colors duration-200">Payment Security</a>
+                    <a href="#" class="text-sm text-white/50 hover:text-accent transition-colors duration-200">Cancellations</a>
+                    <a href="#" class="text-sm text-white/50 hover:text-accent transition-colors duration-200">Privacy Policy</a>
+                    <a href="#" class="text-sm text-white/50 hover:text-accent transition-colors duration-200">India Domestic Quarantine Rules</a>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="py-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p class="text-xs text-white/30">© 2025 Travel Thrive. All rights reserved.</p>
+            <p class="text-xs text-white/30">Tours & Travel Company · New Delhi, India</p>
+        </div>
+    </div>
+</footer>
+
+
+<!-- ============ WHATSAPP FLOAT ============ -->
+<a href="https://wa.me/919999687120" target="_blank" rel="noopener noreferrer" class="whatsapp-float fixed bottom-6 right-6 z-40 w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg shadow-[#25D366]/30 hover:scale-110 hover:shadow-xl hover:shadow-[#25D366]/40 transition-all duration-300" aria-label="Chat on WhatsApp">
+    <i data-lucide="message-circle" class="w-6 h-6 text-white"></i>
+</a>
+
+<!-- ============ BACK TO TOP ============ -->
+<button id="backToTop" class="back-to-top fixed bottom-6 left-6 z-40 w-11 h-11 bg-white border border-stone-200 rounded-full flex items-center justify-center shadow-lg shadow-black/5 hover:bg-accent hover:text-white hover:border-accent transition-all duration-300" aria-label="Back to top">
+    <i data-lucide="chevron-up" class="w-5 h-5"></i>
+</button>
+
+
+<!-- ============ JAVASCRIPT ============ -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+
+    // Initialize Lucide icons
+    lucide.createIcons();
+
+    // ---- HEADER SCROLL EFFECT ----
+    const header = document.getElementById('header');
+    let lastScroll = 0;
+
+    function handleHeaderScroll() {
+        const scrollY = window.scrollY;
+        if (scrollY > 80) {
+            header.classList.add('header-scrolled');
+        } else {
+            header.classList.remove('header-scrolled');
+        }
+        lastScroll = scrollY;
+    }
+    window.addEventListener('scroll', handleHeaderScroll, { passive: true });
+    handleHeaderScroll(); // Initial check
+
+    // ---- MOBILE MENU ----
+    const menuToggle = document.getElementById('menuToggle');
+    const menuClose = document.getElementById('menuClose');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileOverlay = document.getElementById('mobileOverlay');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+    function openMenu() {
+        mobileMenu.classList.add('open');
+        mobileOverlay.classList.add('open');
+        document.body.style.overflow = 'hidden';
+        menuToggle.setAttribute('aria-expanded', 'true');
+    }
+
+    function closeMenu() {
+        mobileMenu.classList.remove('open');
+        mobileOverlay.classList.remove('open');
+        document.body.style.overflow = '';
+        menuToggle.setAttribute('aria-expanded', 'false');
+    }
+
+    menuToggle.addEventListener('click', openMenu);
+    menuClose.addEventListener('click', closeMenu);
+    mobileOverlay.addEventListener('click', closeMenu);
+    mobileNavLinks.forEach(link => link.addEventListener('click', closeMenu));
+
+    // Close on Escape
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+            closeMenu();
+        }
+    });
+
+    // ---- MOBILE ACCORDIONS ----
+    const accordionToggles = document.querySelectorAll('.mobile-accordion-toggle');
+    accordionToggles.forEach(toggle => {
+        toggle.addEventListener('click', () => {
+            const body = toggle.nextElementSibling;
+            const icon = toggle.querySelector('[data-lucide]');
+            const isOpen = body.classList.contains('open');
+
+            // Close all
+            document.querySelectorAll('.mobile-accordion-body').forEach(b => b.classList.remove('open'));
+            document.querySelectorAll('.mobile-accordion-toggle [data-lucide]').forEach(i => i.style.transform = '');
+
+            if (!isOpen) {
+                body.classList.add('open');
+                if (icon) icon.style.transform = 'rotate(180deg)';
+                toggle.setAttribute('aria-expanded', 'true');
+            } else {
+                toggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+    });
+
+    // ---- SERVICE CARD EXPAND ----
+    const serviceToggles = document.querySelectorAll('.service-toggle');
+    serviceToggles.forEach(toggle => {
+        toggle.addEventListener('click', () => {
+            const card = toggle.closest('.service-card');
+            const expand = card.querySelector('.service-expand');
+            const icon = toggle.querySelector('[data-lucide]');
+            const isOpen = expand.classList.contains('active');
+
+            // Close all others
+            document.querySelectorAll('.service-expand.active').forEach(el => {
+                el.classList.remove('active');
+                const otherIcon = el.closest('.service-card').querySelector('.service-toggle [data-lucide]');
+                if (otherIcon) otherIcon.style.transform = '';
+                el.closest('.service-card').querySelector('.service-toggle').setAttribute('aria-expanded', 'false');
+            });
+
+            if (!isOpen) {
+                expand.classList.add('active');
+                if (icon) icon.style.transform = 'rotate(180deg)';
+                toggle.setAttribute('aria-expanded', 'true');
+            }
+        });
+    });
+
+    // ---- SCROLL REVEAL ----
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -60px 0px'
+    });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    // ---- BACK TO TOP ----
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 600) {
+            backToTop.classList.add('visible');
+        } else {
+            backToTop.classList.remove('visible');
+        }
+    }, { passive: true });
+
+    backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // ---- SUBTLE HERO PARALLAX ----
+    const heroBg = document.querySelector('.hero-bg');
+    if (heroBg) {
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            if (scrollY < window.innerHeight) {
+                heroBg.style.transform = `translateY(${scrollY * 0.3}px) scale(1.05)`;
+            }
+        }, { passive: true });
+        // Set initial scale
+        heroBg.style.transform = 'scale(1.05)';
+    }
+
+    // ---- SMOOTH SCROLL FOR ANCHOR LINKS ----
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            const target = document.querySelector(targetId);
+            if (target) {
+                e.preventDefault();
+                const headerHeight = header.offsetHeight;
+                const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight - 20;
+                window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+            }
+        });
+    });
+
+});
+</script>
+
+</body>
+</html>

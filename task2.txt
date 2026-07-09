@@ -1,0 +1,385 @@
+You are an award-winning UI/UX designer, creative director, and senior frontend engineer.
+
+Design and build a premium, modern, static, responsive website for **Travel Thrive** using only HTML, CSS, and JavaScript.
+
+Imagine this website is launching in 2026 and must compete visually with premium travel brands.
+
+The final result should feel like a modern luxury travel company rather than a traditional travel agency.
+
+## Objective
+
+Design a premium, static website using only HTML, CSS, and JavaScript.
+
+Requirements:
+
+* No backend
+* No database
+* No login
+* No booking engine
+* No form submissions
+* No API calls
+
+Everything must be deployable as static files.
+
+Clickable phone numbers, email links, WhatsApp links, and Google Maps embeds are allowed.
+
+## Design Philosophy
+
+Approach this project as if you are designing a completely new premium travel brand from scratch.
+
+Think beyond common travel agency templates.
+
+Create a distinctive visual identity with thoughtful layouts, refined typography, elegant spacing, and premium interactions.
+
+Every section should feel intentionally designed while remaining part of one cohesive design system.
+
+## Creative Direction
+
+Aim for a blend of:
+
+* Luxury hospitality
+* Editorial magazine
+* Modern product design
+* Premium tourism branding
+
+Take inspiration from the overall design quality of:
+
+* Airbnb
+* Aman Resorts
+* Black Tomato
+* Audley Travel
+* Travelive
+* Booking.com (information hierarchy only)
+* Expedia (service presentation only)
+
+Do **not** copy any of these websites.
+
+Use them only as inspiration for layout quality, typography, spacing, visual hierarchy, and interaction design.
+
+## Visual Style
+
+Use:
+
+* Oversized typography
+* Large immersive photography
+* Editorial-inspired layouts
+* Asymmetrical compositions where appropriate
+* Subtle glassmorphism only if tasteful
+* Layered cards
+* Soft shadows
+* Rounded corners
+* Elegant gradients
+* Generous whitespace
+* Premium iconography
+* Smooth scroll animations
+* Tasteful parallax
+* Refined hover effects
+* High-quality travel imagery
+
+The overall aesthetic should feel calm, premium, and trustworthy.
+
+## Color Palette
+
+Create a sophisticated palette inspired by luxury travel.
+
+Suggested tones:
+
+* Warm White
+* Sand
+* Deep Navy
+* Forest Green
+* Soft Gold accents
+* Charcoal
+* Muted Blue
+
+Avoid loud colors and flashy gradients.
+
+## Typography
+
+Use modern Google Fonts.
+
+Pair one display font with one clean sans-serif font.
+
+Emphasize:
+
+* Large headlines
+* Comfortable reading width
+* Strong visual hierarchy
+* Excellent spacing
+* Editorial rhythm
+
+## UX Goals
+
+Within the first few seconds, visitors should clearly understand:
+
+* Who Travel Thrive is
+* What services the company provides
+* Why the company is trustworthy
+* How to contact the company
+
+Every section should naturally guide visitors toward getting in touch.
+
+## Information Architecture
+
+Navigation:
+
+* Home
+* About Us
+* Packages
+* Ticketing
+* Contact Us
+
+Packages dropdown:
+
+* Inbound Travel Services
+* Domestic Travel Services
+* Outbound Travel Services
+
+Ticketing dropdown:
+
+* Air Ticket Booking
+* Bus Ticket Booking
+* Train Ticket Booking
+
+Footer pages:
+
+* Terms & Conditions
+* Privacy Policy
+* Payment Security
+* Cancellation Policy
+* India Domestic Quarantine Rules
+
+## Homepage Structure
+
+Create a premium landing page including:
+
+1. Transparent sticky navigation
+2. Full-screen cinematic hero
+3. Company introduction
+4. Trust and credibility section
+5. Service showcase
+6. Travel categories
+7. Why Choose Us
+8. About Travel Thrive
+9. Premium travel gallery
+10. Associated partners
+11. Contact section
+12. Premium footer
+
+Avoid repetitive stacked sections.
+
+Use alternating layouts, varied content widths, and visual rhythm throughout the page.
+
+## Services
+
+Include all existing services:
+
+* Inbound Travel Services
+* Domestic Travel Services
+* Outbound Travel Services
+* Air Ticket Booking
+* Bus Ticket Booking
+* Train Ticket Booking
+* Hotel Booking
+* Visa Assistance
+* Travel Insurance
+* Money Exchange
+
+Present these using a mix of layouts such as:
+
+* Large feature cards
+* Split-image sections
+* Editorial blocks
+* Interactive hover cards
+* Staggered grids
+* Image overlays
+
+Avoid identical card layouts throughout.
+
+## Gallery
+
+Create an elegant gallery using one of the following:
+
+* Masonry layout
+* Editorial collage
+* Mixed-size cards
+* Large feature imagery
+* Story-inspired travel layouts
+
+Include subtle reveal animations.
+
+## Partner Section
+
+Present associated organizations using clean monochrome logos with elegant spacing.
+
+Include:
+
+* Western Union
+* MoneyGram
+* IRCTC
+* Amadeus
+* MSC Cruises
+* Star Cruises
+* ETAA
+
+## Contact Section
+
+Create a premium contact experience featuring:
+
+* Office address
+* Phone numbers
+* Email
+* Website
+* WhatsApp button
+* Embedded Google Map
+
+Do not include any functional contact form requiring backend processing.
+
+## Mobile Experience
+
+Design mobile layouts intentionally instead of simply shrinking desktop layouts.
+
+Include:
+
+* Slide-out navigation
+* Accordion menus
+* Touch-friendly cards
+* Comfortable spacing
+* Sticky bottom contact bar
+* Floating WhatsApp button
+
+## Motion Design
+
+Use subtle animations including:
+
+* Fade-in
+* Slide-in
+* Scale transitions
+* Image reveal
+* Text reveal
+* Scroll-triggered animations
+* Counter animations
+* Smooth scrolling
+* Elegant hover interactions
+
+Animations should enhance the experience without becoming distracting.
+
+## Accessibility
+
+Ensure:
+
+* Semantic HTML
+* ARIA labels
+* Keyboard navigation
+* Visible focus states
+* High color contrast
+* Lazy-loaded images
+* Reduced-motion support
+
+## Performance
+
+* Lightweight code
+* Optimized CSS
+* Reusable utility classes
+* Modular structure
+* SEO-friendly semantic markup
+* Easy to maintain and edit
+
+## Content Rules
+
+Preserve the existing business information.
+
+Do not invent:
+
+* New services
+* New destinations
+* New certifications
+* New testimonials
+* New awards
+* New office locations
+* New pricing
+
+You may improve wording for clarity, readability, and professionalism while preserving the original meaning.
+
+## Business Information
+
+**Company:** Travel Thrive
+
+**Tagline:** "We plan your holiday. You enjoy it!"
+
+**Established:** Since 2000
+
+**Business Type:**
+
+* Travel Agency
+* Tour Operator
+* Tours & Travel Company
+
+**Services:**
+
+* Inbound Travel Services
+* Domestic Travel Services
+* Outbound Travel Services
+* Air Ticket Booking
+* Bus Ticket Booking
+* Train Ticket Booking
+* Hotel Booking
+* Visa Assistance
+* Travel Insurance
+* Money Exchange
+
+**Office Address:**
+
+Shop No. 2
+Old Market
+Tilak Nagar
+New Delhi – 110018
+
+**Phone:**
+
++91 9999687120
+
++91 11 45642929
+
+**Email:**
+
+[contact@travelthrive.com](mailto:contact@travelthrive.com)
+
+**Associated With:**
+
+* Western Union
+* MoneyGram
+* IRCTC
+* Amadeus
+* MSC Cruises
+* Star Cruises
+* ETAA
+
+## Deliverables
+
+Before writing code:
+
+1. Explain the overall design concept.
+2. Present the design system.
+3. Provide a sitemap.
+4. List all reusable UI components.
+5. Explain the responsive strategy.
+
+Then generate the complete production-ready project including:
+
+* index.html
+* about.html
+* packages.html
+* ticketing.html
+* contact.html
+* CSS
+* JavaScript
+* Reusable components
+* Organized assets structure
+* Well-commented code
+* Modern animations
+* Responsive navigation
+* Reusable service cards
+* Premium footer
+
+The final website should feel like it was created by a world-class digital agency for a premium travel brand. Prioritize originality, excellent visual hierarchy, refined typography, thoughtful spacing, elegant interactions, and exceptional craftsmanship throughout.

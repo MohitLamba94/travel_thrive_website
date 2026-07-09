@@ -1,0 +1,260 @@
+You are a senior product designer + frontend engineer. Redesign the Travel Thrive website as a polished, modern, static, responsive HTML website with strong UI/UX, while keeping the same business content and overall site structure. The site has no backend, no database, no user login, no email server, and no form submissions. Do not add any user input that requires backend processing. It is okay to include clickable phone, email, WhatsApp, and Google Maps embed links, plus smooth animations, hover states, and subtle motion. The site should feel dynamic, premium, and trustworthy, but remain fully static.
+
+Goal:
+Create a modern travel-agency website that keeps the same content, same page intent, and same business information, while improving layout, typography, spacing, visual hierarchy, navigation, conversion clarity, and mobile experience.
+
+Content rule:
+Keep the existing content meaning unchanged. You may rewrite microcopy slightly for clarity and polish, but do not add new services, new claims, new destinations, or new business promises unless they already exist in the current site content. Images can be changed to better-quality travel imagery. Existing contact details, service categories, and policy pages should remain present.
+
+Current content structure to preserve:
+
+* Home
+* About Us
+* Packages
+
+  * In Bound Travel Services
+  * Domestic Travel Services
+  * Out Bound Travel Services
+* Ticketing
+
+  * Air Ticket Booking Service
+  * Bus Ticket Booking Service
+  * Train Ticket Booking Service
+* Contact Us
+* Footer links:
+
+  * Terms and Conditions
+  * Payment Security
+  * Cancellations
+  * Privacy Policy
+  * India Domestic Quarantine Rules
+* Existing service sections on the homepage:
+
+  * In Bound Travel Services
+  * Domestic Travel Services
+  * Out Bound Travel Services
+  * Ticketing
+  * Visa Assistance
+  * Travel Insurance
+  * Money Exchange
+  * Hotel
+* Gallery section
+* Associated-with / partner logos section
+* Contact details section with address, phone numbers, email, and website
+
+Design direction:
+Make the site feel like a premium travel brand, not an old brochure site. Use a clean, editorial travel aesthetic with generous whitespace, strong typography, refined cards, smooth transitions, and a premium color palette. It should be highly visual and easy to scan. The homepage should immediately communicate:
+
+1. what the company does,
+2. why it is trustworthy,
+3. what services are available,
+4. how to contact them.
+
+Take inspiration from the best current travel websites in these ways:
+
+* Expedia-style package-led hero section and clear travel service positioning
+* Booking.com-style destination discovery, trust cues, and large scannable content blocks
+* Travelive-style polished destination/category navigation and premium travel branding
+
+Do not copy any site directly. Use them only as UX inspiration.
+
+Information architecture:
+Create a clear sticky header with logo, primary navigation, and a prominent contact CTA. Navigation should include:
+
+* Home
+* About Us
+* Packages
+* Ticketing
+* Contact Us
+
+Use dropdown or mega-menu behavior for Packages and Ticketing on desktop, and an elegant accordion or slide-out menu on mobile.
+
+Homepage layout:
+
+1. Hero section
+
+   * Large travel-themed visual
+   * Strong headline
+   * Supporting subheadline that communicates the company’s travel services
+   * Two CTAs max, such as “Explore Services” and “Contact Us”
+   * No search form, because there is no backend and no user input processing
+   * Use subtle motion or parallax if appropriate, but keep it tasteful
+
+2. Trust / highlights band
+
+   * Present the company’s experience, service breadth, and credibility in a modern icon-based strip
+   * Highlight year established, service categories, and broad travel support
+
+3. Services grid
+
+   * Cards for:
+
+     * In Bound Travel Services
+     * Domestic Travel Services
+     * Out Bound Travel Services
+     * Air Ticket Booking Service
+     * Bus Ticket Booking Service
+     * Train Ticket Booking Service
+     * Visa Assistance
+     * Travel Insurance
+     * Money Exchange
+     * Hotel
+   * Each card should have a visual, title, short text, and optional “Read more” style link that scrolls to a detail section or expands inline, still static
+
+4. About section
+
+   * Present the company overview in a more readable, modern format
+   * Keep the meaning of the current About Us text
+   * Use a split layout with image and text
+
+5. Gallery section
+
+   * Replace the current gallery with a premium masonry or card layout
+   * Show travel imagery that reflects places/trips/experiences
+   * Keep it static and elegant
+
+6. Partner / associated logos section
+
+   * Present logos in a clean monochrome or muted strip
+   * Make this section feel credible and premium
+
+7. Contact section
+
+   * Show address, phone numbers, email, website
+   * Embed Google Map location
+   * Add a simple contact card layout, but no form submission
+   * Any contact form design must be visual only and disabled or removed if it suggests backend submission
+
+8. Footer
+
+   * Include the same policy links and important site links
+   * Use a polished footer with social icons, contact summary, and quick navigation
+
+Design requirements:
+
+* Fully responsive from mobile to desktop
+* Fast-loading and SEO-friendly semantic HTML
+* Accessible color contrast and keyboard-friendly navigation
+* Strong visual hierarchy with consistent spacing system
+* Modern travel iconography
+* Smooth hover effects, scroll reveal, and subtle micro-interactions
+* No excessive animation; use motion to enhance clarity, not distract
+* No heavy dependencies unless absolutely necessary
+* No backend logic, no API calls, no data collection, no database, no form submission
+
+Technical requirements:
+
+* Build as a static website using HTML, CSS, and JavaScript
+* If using a framework, keep it front-end only and easy to deploy as static files
+* Use reusable components or sections
+* Use local static data for any repeated content
+* Make it easy to edit later
+* Avoid any code that depends on server-side rendering unless it is still exportable as static HTML
+* Include clear file structure and well-commented code
+
+Important UX improvements to make:
+
+* Replace the dated layout with modern spacing and typography
+* Make the services easier to compare visually
+* Improve readability of long text blocks
+* Improve CTA placement and conversion clarity
+* Make the site look trustworthy and premium
+* Ensure the homepage feels like a proper agency landing page instead of a generic company page
+* Remove any unrelated injected content, especially anything about airport parking or other unrelated topics
+* Keep the content but make the presentation much better
+
+Deliverables:
+
+1. A complete static homepage
+2. Clean responsive navigation
+3. Styled service sections for all existing services
+4. An improved about section
+5. Improved gallery
+6. Contact section with Google Map embed
+7. Polished footer with the existing policy pages
+8. Reusable design system consistent across all sections
+
+Before coding, create a short sitemap and component plan. Then build the site.
+
+When in doubt, prefer a more premium, calm, travel-luxury visual style over a loud, flashy one.
+
+-----------------------------------------
+
+Comapany details
+
+Company Name: Travel Thrive
+
+Business Type
+
+Tours & Travel Company
+Travel Agency
+Tour Operator
+
+Established
+
+Since 2000
+
+Business Description
+
+Travel Thrive is a travel agency and tour operator based in New Delhi, India.
+The company provides inbound, domestic, and outbound travel services.
+It offers customized travel solutions for individuals and groups.
+The company emphasizes professional service, affordable pricing, and customer satisfaction.
+Tagline:
+"We plan your holiday. You enjoy it!"
+Services Mentioned
+Inbound Travel Services
+Domestic Travel Services
+Outbound Travel Services
+Air Ticket Booking
+Bus Ticket Booking
+Train Ticket Booking
+Hotel Booking
+Visa Assistance
+Travel Insurance
+Money Exchange / Foreign Exchange
+Contact Information
+
+Office Address
+
+Shop No. 2
+Old Market
+Tilak Nagar
+New Delhi – 110018
+
+Phone Numbers
+
++91 9999687120
++91 11 45642929
+
+
+Email
+
+contact@travelthrive.com
+
+The comapny is associated with
+
+• Western Union
+  - International Money Transfer
+
+• IRCTC
+  - Indian Railway Catering and Tourism Corporation
+
+• Amadeus
+  - Global Distribution System (GDS) for travel bookings
+
+• MSC Cruises
+  - International Cruise Line
+
+• MoneyGram
+  - International Money Transfer
+
+• ETAA
+  - Enterprising Travel Agents Association
+
+• Star Cruises
+  - International Cruise Line
+
+------
+
+Create all you files inside "/Users/mohitl/Documents/travel_thrive_website/website_006". Do not read 001 to 005 folders. i repeat do not read them. do a fresh attempt.
