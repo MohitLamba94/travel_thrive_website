@@ -388,7 +388,27 @@ input:focus-visible {
   max-width: 16ch;
   text-shadow: 0 2px 24px rgba(9, 20, 34, 0.4);
 }
-.hero-title em { font-style: italic; color: var(--color-gold-soft); }
+.hero-title em { font-style: italic; color: var(--color-gold-soft); font-weight: 600; font-size: 1.15em;}
+
+/* Homepage brand punch line — chunky rounded display face (Baloo 2) */
+.hero-title--brand {
+  font-family: "Baloo 2", var(--font-display), sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.005em;
+  line-height: 0.92;
+  color: var(--color-warm-white);
+  max-width: none;
+  text-shadow: 0 3px 20px rgba(9, 20, 34, 0.45);
+}
+.hero-title--brand em {
+  font-style: normal;
+  font-weight: 800;
+  color: var(--color-gold-soft);
+  font-size: 1.3em;
+  display: inline-block;
+  line-height: 0.9;
+}
 .hero-sub {
   margin-top: var(--space-sm);
   max-width: 46ch;
@@ -712,7 +732,6 @@ input:focus-visible {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: stretch;
-  min-height: 460px;
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-card);
@@ -721,8 +740,14 @@ input:focus-visible {
 .category-row:last-child { margin-bottom: 0; }
 .category-row.reverse { direction: rtl; }
 .category-row.reverse > * { direction: ltr; }
-.category-media { position: relative; overflow: hidden; }
+/* Always-landscape media frame (prevents the portrait crop at mid widths) */
+.category-media { position: relative; overflow: hidden; aspect-ratio: 3 / 2; }
 .category-media img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Exception (outbound): tall source image shown in FULL, never cropped.
+   Portrait frame matches the image aspect so there is no crop and no letterbox. */
+.category-row--full .category-media { aspect-ratio: 2 / 3; background: var(--color-sand); }
+.category-row--full .category-media img { object-fit: contain; }
 .category-copy {
   background: var(--color-white);
   padding: var(--space-lg);
