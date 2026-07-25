@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Our Services — Travel, Ticketing, Hotels, Visas &amp; Forex | Travel Thrive</title>
+<meta name="description" content="Explore Travel Thrive's services — inbound, domestic and outbound travel, air, bus and train ticketing, hotel booking, visa assistance, travel insurance and money exchange, all under one roof since 2000." />
+
+<!-- Fonts: Bricolage Grotesque (display) + Inter (body) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<!-- ============================= NAVIGATION ============================= -->
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand">Travel<span>Thrive</span></a>
+
+    <nav class="main-nav" aria-label="Primary">
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li class="has-dropdown">
+          <a href="packages.html" class="nav-link is-active" aria-current="page">Services
+            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <div class="mega-menu">
+            <a class="mega-menu-item" href="packages.html#inbound">
+              <span class="mega-menu-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 4.6c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg></span>
+              <span class="mega-menu-text"><strong>Inbound Travel Services</strong><span>For travellers visiting India</span></span>
+            </a>
+            <a class="mega-menu-item" href="packages.html#domestic">
+              <span class="mega-menu-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg></span>
+              <span class="mega-menu-text"><strong>Domestic Travel Services</strong><span>Explore destinations within India</span></span>
+            </a>
+            <a class="mega-menu-item" href="packages.html#outbound">
+              <span class="mega-menu-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
+              <span class="mega-menu-text"><strong>Outbound Travel Services</strong><span>International holidays &amp; tours</span></span>
+            </a>
+            <a class="mega-menu-item mega-menu-item--all" href="packages.html">
+              <span class="mega-menu-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></span>
+              <span class="mega-menu-text"><strong>View All Services</strong><span>Full overview of our travel services</span></span>
+            </a>
+          </div>
+        </li>
+        <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-cta">
+      <a href="https://forms.gle/wTLGdkfSHzj35NgC6" target="_blank" rel="noopener" class="btn btn-primary">Plan My Trip</a>
+    </div>
+
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============================= MOBILE NAV DRAWER ============================= -->
+<nav id="mobileNav" class="mobile-nav" aria-label="Mobile">
+  <ul class="mobile-nav-list">
+    <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+    <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
+    <li>
+      <button class="mobile-nav-link mobile-accordion-toggle" aria-expanded="false">
+        Services
+        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="mobile-accordion-panel">
+        <ul>
+          <li><a href="packages.html#inbound">Inbound Travel Services</a></li>
+          <li><a href="packages.html#domestic">Domestic Travel Services</a></li>
+          <li><a href="packages.html#outbound">Outbound Travel Services</a></li>
+        </ul>
+      </div>
+    </li>
+    <li><a href="contact.html" class="mobile-nav-link">Contact Us</a></li>
+  </ul>
+
+  <div class="mobile-nav-contact">
+    <a href="tel:+919999687120" class="btn btn-primary">Call +91 99996 87120</a>
+    <a href="https://wa.me/919999687120" target="_blank" rel="noopener" class="btn btn-whatsapp">Chat on WhatsApp</a>
+  </div>
+</nav>
+
+<main>
+
+  <!-- ============================= PAGE HERO ============================= -->
+  <section class="hero hero--page">
+    <div class="hero-media">
+      <img src="assets/coastal-cliff.jpg" alt="Dramatic coastal cliffs meeting a turquoise sea" />
+    </div>
+    <div class="hero-content container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> <span class="sep">/</span> <span>Services</span>
+      </div>
+      <h1 class="hero-title">Every service <em>your journey needs.</em></h1>
+      <p class="hero-sub">From inbound, domestic and outbound travel to ticketing, hotels, visas, insurance and money exchange — Travel Thrive handles it all under one roof, the way we have since 2000.</p>
+    </div>
+  </section>
+
+  <!-- ============================= INTRO ============================= -->
+  <section class="intro">
+    <div class="container">
+      <div class="intro-text reveal">
+        <span class="eyebrow">Our Services</span>
+        <h2 class="section-heading">One team for the whole trip.</h2>
+        <p class="section-lede">Rather than piecing your journey together across vendors, let a single team plan the travel, book the tickets, sort the stays and handle the paperwork — start to finish.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= TRAVEL CATEGORIES ============================= -->
+  <section class="categories">
+    <div class="container">
+      <div class="services-head reveal">
+        <div>
+          <span class="eyebrow">Travel Services</span>
+          <h2 class="section-heading">Wherever you're headed, we've mapped it.</h2>
+        </div>
+      </div>
+
+      <div class="category-row category-row--full reveal" id="outbound">
+        <div class="category-media">
+          <img src="assets/european-old-town.jpg" alt="Historic European old town with cobbled streets and canals" loading="lazy" />
+        </div>
+        <div class="category-copy">
+          <span class="eyebrow">Outbound</span>
+          <h3>International holidays, planned locally.</h3>
+          <p>From visa paperwork to on-ground itineraries, our outbound desk manages every layer of your international trip — flights, stays, transfers and sightseeing, all coordinated by one team.</p>
+          <a href="https://wa.me/919999687120" target="_blank" rel="noopener" class="btn btn-dark">Enquire About Outbound</a>
+        </div>
+      </div>
+
+      <div class="category-row reverse reveal" id="domestic">
+        <div class="category-media">
+          <img src="assets/mountain-lake.jpg" alt="Serene mountain lake framed by forested hills" loading="lazy" />
+        </div>
+        <div class="category-copy">
+          <span class="eyebrow">Domestic</span>
+          <h3>India, seen the way it should be.</h3>
+          <p>Hills, coasts, heritage cities and hidden corners — our domestic packages are built around how you like to travel, at a pace that suits you.</p>
+          <a href="https://wa.me/919999687120" target="_blank" rel="noopener" class="btn btn-dark">Enquire About Domestic</a>
+        </div>
+      </div>
+
+      <div class="category-row reveal" id="inbound">
+        <div class="category-media">
+          <img src="assets/jodhpur-fort.jpg" alt="Mehrangarh Fort rising above the blue city of Jodhpur, Rajasthan, India" loading="lazy" />
+        </div>
+        <div class="category-copy">
+          <span class="eyebrow">Inbound</span>
+          <h3>A warm welcome to India.</h3>
+          <p>For travellers visiting India, we design comfortable, well-paced journeys backed by local, on-ground support from arrival to departure.</p>
+          <a href="https://wa.me/919999687120" target="_blank" rel="noopener" class="btn btn-dark">Enquire About Inbound</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= EVERYTHING ELSE (image showcase) ============================= -->
+  <section class="services">
+    <div class="container">
+      <div class="services-head reveal">
+        <div>
+          <span class="eyebrow">Everything Else</span>
+          <h2 class="section-heading">The rest of your trip, handled.</h2>
+        </div>
+        <p class="section-lede">Tickets, stays, paperwork and currency — the pieces that turn a plan into a journey.</p>
+      </div>
+
+      <div class="services-showcase">
+        <a href="ticketing.html#air" class="service-card reveal">
+          <img src="assets/aircraft-wing.jpg" alt="Aircraft wing above the clouds during flight" loading="lazy" />
+          <div class="service-card-body">
+            <span class="tag">Ticketing</span>
+            <h3>Air Ticket Booking</h3>
+            <p>Domestic and international flights booked through Amadeus and trusted partners.</p>
+          </div>
+        </a>
+
+        <a href="https://wa.me/919999687120" target="_blank" rel="noopener" class="service-card reveal reveal-delay-1">
+          <img src="assets/car-rental.jpg" alt="Car on an open road at golden hour" loading="lazy" />
+          <div class="service-card-body">
+            <span class="tag">On the Road</span>
+            <h3>Car Rentals</h3>
+            <p>Self-drive and chauffeur-driven cars for airport transfers and road trips.</p>
+          </div>
+        </a>
+
+        <a href="https://wa.me/919999687120" target="_blank" rel="noopener" class="service-card reveal reveal-delay-2">
+          <img src="assets/luxury-hotel-room.jpg" alt="Elegant luxury hotel room with a made bed and soft lighting" loading="lazy" />
+          <div class="service-card-body">
+            <span class="tag">Stay</span>
+            <h3>Hotel Booking</h3>
+            <p>Handpicked stays for every budget, at destinations across India and abroad.</p>
+          </div>
+        </a>
+
+        <a href="https://wa.me/919999687120" target="_blank" rel="noopener" class="service-card reveal">
+          <img src="assets/travel-documents.jpg" alt="Passport and travel documents laid out for a trip" loading="lazy" />
+          <div class="service-card-body">
+            <span class="tag">Documentation</span>
+            <h3>Visa Assistance</h3>
+            <p>Guidance and paperwork support to keep your visa applications on track.</p>
+          </div>
+        </a>
+
+        <a href="https://wa.me/919999687120" target="_blank" rel="noopener" class="service-card reveal reveal-delay-1">
+          <img src="assets/travel-suitcase.jpg" alt="Traveller wheeling a suitcase while departing on a trip" loading="lazy" />
+          <div class="service-card-body">
+            <span class="tag">Protection</span>
+            <h3>Travel Insurance</h3>
+            <p>Cover for the unexpected, so you travel with genuine peace of mind.</p>
+          </div>
+        </a>
+
+        <a href="https://wa.me/919999687120" target="_blank" rel="noopener" class="service-card reveal reveal-delay-2">
+          <img src="assets/amsterdam-canal.jpg" alt="Assorted international currency notes" loading="lazy" />
+          <div class="service-card-body">
+            <span class="tag">Currency</span>
+            <h3>Money Exchange</h3>
+            <p>Foreign currency and transfers backed by Western Union and MoneyGram.</p>
+          </div>
+        </a>
+
+        <a href="https://wa.me/919999687120" target="_blank" rel="noopener" class="service-card reveal reveal-delay-3">
+          <img src="assets/cruise-ship.jpg" alt="Luxury cruise ship sailing the open sea at sunset" loading="lazy" />
+          <div class="service-card-body">
+            <span class="tag">Cruises</span>
+            <h3>Cruise Holidays</h3>
+            <p>Ocean and river cruises arranged with MSC Cruises and Star Cruises.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= WHY BOOK WITH US ============================= -->
+  <section class="why">
+    <div class="container why-grid">
+      <div class="why-media reveal">
+        <img src="assets/hotel-concierge.jpg" alt="Hotel reception lobby with staff ready to assist guests" loading="lazy" />
+      </div>
+      <div class="reveal reveal-delay-1">
+        <span class="eyebrow">Why Book With Us</span>
+        <h2 class="section-heading">The details, handled.</h2>
+
+        <div class="why-list">
+          <div class="why-list-item">
+            <span class="why-num">01</span>
+            <div>
+              <h4>25 Years of Experience</h4>
+              <p>A travel agency, tour operator and tours &amp; travel company trusted since 2000.</p>
+            </div>
+          </div>
+          <div class="why-list-item">
+            <span class="why-num">02</span>
+            <div>
+              <h4>One Team, Every Service</h4>
+              <p>Ticketing, hotels, visas, insurance and currency exchange — no need to juggle vendors.</p>
+            </div>
+          </div>
+          <div class="why-list-item">
+            <span class="why-num">03</span>
+            <div>
+              <h4>Direct, Personal Access</h4>
+              <p>Speak to us by phone, email or WhatsApp — no call centres, no automated queues.</p>
+            </div>
+          </div>
+          <div class="why-list-item">
+            <span class="why-num">04</span>
+            <div>
+              <h4>Trusted Global Network</h4>
+              <p>Associated with IRCTC, Amadeus, MSC Cruises, Star Cruises, Western Union, MoneyGram and ETAA.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= ASSOCIATED PARTNERS ============================= -->
+  <section class="partners">
+    <div class="container">
+      <div class="services-head reveal">
+        <div>
+          <span class="eyebrow">Associated With</span>
+          <h2 class="section-heading">Backed by trusted global networks.</h2>
+        </div>
+      </div>
+      <div class="partners-grid reveal">
+        <div class="partner-logo">Western Union</div>
+        <div class="partner-logo">MoneyGram</div>
+        <div class="partner-logo">IRCTC</div>
+        <div class="partner-logo">Amadeus</div>
+        <div class="partner-logo">MSC Cruises</div>
+        <div class="partner-logo">Star Cruises</div>
+        <div class="partner-logo">ETAA</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= CTA BAND ============================= -->
+  <section class="cta-band">
+    <div class="container cta-band-inner reveal">
+      <span class="eyebrow">Let's Get Started</span>
+      <h2 class="section-heading">Ready to plan your next journey?</h2>
+      <p class="section-lede">Tell us where you'd like to go and we'll take care of the rest.</p>
+      <div class="cta-band-actions">
+        <a href="contact.html" class="btn btn-dark">Contact Us</a>
+        <a href="https://wa.me/919999687120" target="_blank" rel="noopener" class="btn btn-whatsapp">WhatsApp Us</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================= FOOTER ============================= -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Travel<span>Thrive</span></div>
+        <p class="footer-tagline">"Plan to travel, travel to thrive." A travel agency and tour operator serving travellers since 2000.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="packages.html">Services</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="packages.html#inbound">Inbound Travel</a></li>
+          <li><a href="packages.html#domestic">Domestic Travel</a></li>
+          <li><a href="packages.html#outbound">Outbound Travel</a></li>
+          <li><a href="packages.html">Hotels &amp; Visas</a></li>
+          <li><a href="packages.html">Insurance &amp; Forex</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li>Shop No. 2, Old Market, Tilak Nagar, New Delhi – 110018</li>
+          <li><a href="tel:+919999687120">+91 99996 87120</a></li>
+          <li><a href="tel:+919582528718">+91 95825 28718</a></li>
+          <li><a href="tel:+911145642929">+91 11 4564 2929</a></li>
+          <li><a href="mailto:contact@travelthrive.com">contact@travelthrive.com</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>
+        &copy; <span id="year"></span> Travel Thrive. All rights reserved. &nbsp;|&nbsp;
+        <a href="terms.html">Terms &amp; Conditions</a> &nbsp;|&nbsp;
+        <a href="privacy.html">Privacy Policy</a> &nbsp;|&nbsp;
+        <a href="payment-security.html">Payment Security</a> &nbsp;|&nbsp;
+        <a href="cancellations.html">Cancellation Policy</a> &nbsp;|&nbsp;
+        <a href="quarantine.html">India Domestic Quarantine Rules</a>
+      </div>
+      <div class="footer-socials">
+        <a href="https://wa.me/919999687120" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2z"/></svg>
+        </a>
+        <a href="mailto:contact@travelthrive.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================= FLOATING / MOBILE STICKY ============================= -->
+<a href="https://wa.me/919999687120" target="_blank" rel="noopener" class="floating-whatsapp" aria-label="Chat with us on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2z"/></svg>
+</a>
+
+<div class="sticky-contact-bar">
+  <div class="container">
+    <a href="tel:+919999687120" class="call">Call Now</a>
+    <a href="https://wa.me/919999687120" target="_blank" rel="noopener" class="whatsapp">WhatsApp</a>
+  </div>
+</div>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="js/main.js"></script>
+</body>
+</html>
