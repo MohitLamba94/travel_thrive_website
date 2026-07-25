@@ -1,5 +1,12 @@
-*.png
-*.jpg
-*.jpeg
 *.zip
 *.DS_Store
+website_001*
+website_002*
+website_003*
+website_004*
+website_005*
+website_006*
+.claude*
+CLAUDE.md
+*.txt
+.gitignore
