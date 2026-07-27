@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amritsar Travel Guide — Golden Temple, Wagah Border &amp; Tours | Travel Thrive</title>
+  <meta name="description" content="A complete guide to Amritsar — the Golden Temple, Wagah Border, Jallianwala Bagh, legendary Punjabi food, shopping and Travel Thrive tour packages." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Fraunces:ital,opsz,wght@0,9..144,380;0,9..144,420;0,9..144,460;0,9..144,500;1,9..144,380;1,9..144,420&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <style>
+    /* ===== Page-scoped styles: Table of Contents + destination layout + packages ===== */
+    .dest-layout{
+      display:grid;
+      grid-template-columns:250px minmax(0,1fr);
+      gap:clamp(30px,4vw,68px);
+      align-items:start;
+    }
+    /* Sticky Table of Contents */
+    .dest-toc{position:sticky;top:104px;font-family:var(--sans);}
+    .dest-toc .toc-label{
+      font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;
+      color:var(--terra);font-weight:700;margin:0 0 14px;padding-left:14px;
+    }
+    .dest-toc nav{border-left:2px solid var(--line);}
+    .dest-toc ul{list-style:none;margin:0;padding:0;}
+    .dest-toc .toc-sub{margin:2px 0 6px;}
+    .dest-toc a{
+      display:block;text-decoration:none;color:var(--muted);
+      font-size:.92rem;line-height:1.35;padding:7px 0 7px 14px;
+      margin-left:-2px;border-left:2px solid transparent;
+      transition:color .2s var(--ease),border-color .2s var(--ease);
+    }
+    .dest-toc .toc-top>a{color:var(--ink);font-weight:600;font-family:var(--serif);font-size:1.02rem;}
+    .dest-toc .toc-sub a{font-size:.86rem;padding-left:26px;}
+    .dest-toc a:hover{color:var(--terra);}
+    .dest-toc a.active{color:var(--terra);border-left-color:var(--terra);}
+    .dest-toc .toc-top>a.active{font-weight:700;}
+
+    /* Content column rhythm */
+    .dest-content>section{scroll-margin-top:100px;}
+    .dest-content .sub-block{scroll-margin-top:100px;margin-top:clamp(38px,5vw,64px);}
+    .dest-content .sub-block:first-of-type{margin-top:0;}
+    .dest-content .sub-head{
+      font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;
+      color:var(--terra);font-weight:700;margin:0 0 10px;
+    }
+    .dest-content h3.block-title{
+      font-family:var(--serif);font-size:clamp(1.5rem,3vw,2.1rem);
+      line-height:1.15;margin:0 0 16px;color:var(--ink);
+    }
+    .dest-content p{color:var(--text);}
+    .section-eyebrow-lg{margin-bottom:30px;}
+
+    /* Fact / mini cards */
+    .fact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin-top:8px;}
+    .fact-card{
+      background:var(--paper);border:1px solid var(--line-soft);
+      border-radius:var(--radius);padding:18px 20px;
+    }
+    .fact-card .k{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--terra);font-weight:700;}
+    .fact-card .v{font-family:var(--serif);font-size:1.12rem;color:var(--ink);margin-top:4px;line-height:1.3;}
+    .lead-list{margin:16px 0 0;padding:0;list-style:none;}
+    .lead-list li{position:relative;padding:8px 0 8px 26px;border-bottom:1px dashed var(--line);color:var(--text);}
+    .lead-list li:last-child{border-bottom:0;}
+    .lead-list li::before{content:"";position:absolute;left:2px;top:15px;width:9px;height:9px;border-radius:50%;background:var(--terra);}
+    .lead-list li b{color:var(--ink);font-family:var(--serif);font-weight:500;}
+
+    /* Packages */
+    .pkg-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:26px;}
+    .pkg-card{
+      background:var(--paper);border:1px solid var(--line-soft);
+      border-radius:var(--radius-lg);padding:30px 28px;
+      display:flex;flex-direction:column;box-shadow:var(--shadow-sm);
+      transition:transform .3s var(--ease),box-shadow .3s var(--ease);
+    }
+    .pkg-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);}
+    .pkg-card.featured{border-color:var(--terra);box-shadow:var(--shadow-md);}
+    .pkg-dur{
+      align-self:flex-start;font-family:var(--sans);font-size:.72rem;font-weight:700;
+      letter-spacing:.1em;text-transform:uppercase;color:var(--terra);
+      background:var(--sand-2);border-radius:999px;padding:6px 14px;
+    }
+    .pkg-name{font-family:var(--serif);font-size:1.5rem;color:var(--ink);margin:16px 0 4px;line-height:1.15;}
+    .pkg-hook{color:var(--muted);font-size:.96rem;margin:0 0 18px;}
+    .pkg-price{font-family:var(--serif);color:var(--ink);font-size:1.05rem;margin:0 0 4px;}
+    .pkg-price b{font-size:1.7rem;color:var(--terra);}
+    .pkg-price small{display:block;color:var(--muted);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;font-family:var(--sans);margin-top:2px;}
+    .pkg-list{list-style:none;margin:20px 0;padding:18px 0 0;border-top:1px solid var(--line);flex:1;}
+    .pkg-list li{position:relative;padding:7px 0 7px 24px;color:var(--text);font-size:.94rem;}
+    .pkg-list li::before{content:"";position:absolute;left:0;top:13px;width:7px;height:7px;border-radius:50%;background:var(--terra);}
+    .pkg-best{font-size:.82rem;color:var(--muted);margin:0 0 18px;}
+    .pkg-best b{color:var(--ink);}
+    .pkg-card .btn{width:100%;justify-content:center;}
+
+    .incl-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:8px;}
+    .incl-card{background:var(--paper);border:1px solid var(--line-soft);border-radius:var(--radius);padding:24px 26px;}
+    .incl-card h4{font-family:var(--serif);color:var(--ink);margin:0 0 12px;font-size:1.15rem;}
+    .incl-card ul{list-style:none;margin:0;padding:0;}
+    .incl-card li{position:relative;padding:6px 0 6px 24px;color:var(--text);font-size:.92rem;}
+    .incl-card.inc li::before{content:"✓";position:absolute;left:0;top:6px;color:var(--teal);font-weight:700;}
+    .incl-card.exc li::before{content:"×";position:absolute;left:0;top:6px;color:var(--terra);font-weight:700;}
+    .price-note{font-size:.8rem;color:var(--muted);margin-top:18px;font-style:italic;}
+
+    @media (max-width:980px){
+      .dest-layout{grid-template-columns:1fr;}
+      .dest-toc{display:none;}
+      .incl-grid{grid-template-columns:1fr;}
+    }
+  </style>
+</head>
+<body>
+  <!-- ================= HEADER ================= -->
+  <header class="site-header transparent">
+    <div class="wrap wrap-wide bar">
+      <a href="../index.html" class="brand" aria-label="Travel Thrive home">
+        <span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7S2 12 2 12Z"/><path d="M12 5c2 2 2 12 0 14M12 5c-2 2-2 12 0 14"/></svg></span>
+        <span>Travel <b>Thrive</b></span>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav-links">
+          <li class="nav-item"><a href="../index.html">Home</a></li>
+          <li class="nav-item"><a href="../about.html">About Us</a></li>
+          <li class="nav-item has-drop">
+            <a href="../packages.html" aria-haspopup="true">Services
+              <svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </a>
+            <div class="dropdown" role="menu">
+              <a href="../packages.html#outbound" role="menuitem"><span class="drop-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10Z"/></svg></span><span class="drop-text"><span>Outbound Travel Services</span><small>International holidays, planned locally</small></span></a>
+              <a href="../packages.html#domestic" role="menuitem"><span class="drop-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg></span><span class="drop-text"><span>Domestic Travel Services</span><small>India, seen the way it should be</small></span></a>
+              <a href="../packages.html#inbound" role="menuitem"><span class="drop-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 4.6c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg></span><span class="drop-text"><span>Inbound Travel Services</span><small>A warm welcome to India</small></span></a>
+              <a href="../ticketing.html" role="menuitem"><span class="drop-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M13 5v14"/></svg></span><span class="drop-text"><span>Ticketing</span><small>Air tickets &amp; car rentals</small></span></a>
+              <div class="divider"></div>
+              <a href="../packages.html" role="menuitem" class="view-all"><span class="drop-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></span><span class="drop-text"><span>View All Services</span><small>Full overview of our travel services</small></span></a>
+            </div>
+          </li>
+          <li class="nav-item"><a href="../contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn btn-primary header-cta" href="https://forms.gle/wTLGdkfSHzj35NgC6" target="_blank" rel="noopener">Plan My Trip</a>
+        <button class="nav-toggle" aria-label="Open menu" aria-controls="drawer" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ MOBILE DRAWER ============ -->
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+  <aside class="drawer" id="drawer" aria-hidden="true" aria-label="Menu">
+    <div class="drawer-top">
+      <a href="../index.html" class="brand"><span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7S2 12 2 12Z"/><path d="M12 5c2 2 2 12 0 14M12 5c-2 2-2 12 0 14"/></svg></span><span>Travel <b>Thrive</b></span></a>
+      <button class="drawer-close" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    </div>
+    <nav aria-label="Mobile">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About Us</a>
+      <span class="drawer-sub-label">Services</span>
+      <div class="drawer-sub">
+        <a href="../packages.html#outbound">Outbound Travel</a>
+        <a href="../packages.html#domestic">Domestic Travel</a>
+        <a href="../packages.html#inbound">Inbound Travel</a>
+        <a href="../ticketing.html">Ticketing</a>
+        <a href="../packages.html">View All Services</a>
+      </div>
+      <a href="../contact.html">Contact Us</a>
+    </nav>
+    <div class="drawer-actions">
+      <a class="btn btn-primary" href="https://forms.gle/wTLGdkfSHzj35NgC6" target="_blank" rel="noopener">Plan My Trip</a>
+      <a class="btn btn-ink" href="tel:+919999687120">Call Us</a>
+      <a class="btn btn-wa" href="https://wa.me/919999687120" target="_blank" rel="noopener">Chat on WhatsApp</a>
+    </div>
+  </aside>
+
+  <main>
+    <!-- ================= HERO ================= -->
+    <section class="page-hero">
+      <div class="page-hero-media"><img src="../assets/amritsar-golden-temple.jpg" alt="The Golden Temple reflected in the Amrit Sarovar, Amritsar" fetchpriority="high" /></div>
+      <div class="wrap wrap-wide page-hero-inner">
+        <div class="breadcrumb"><a href="../index.html">Home</a><span class="sep">/</span><span>Hot Destinations</span><span class="sep">/</span><span class="here">Amritsar</span></div>
+        <h1>Discover <span class="brand-word">Amritsar.</span></h1>
+        <p>The spiritual capital of Sikhism and the beating cultural heart of Punjab — a city of gold and devotion by day, glowing reflections and shared meals by night.</p>
+      </div>
+    </section>
+
+    <!-- ============ TOC + CONTENT ============ -->
+    <section class="section-pad">
+      <div class="wrap wrap-wide">
+        <div class="dest-layout">
+
+          <!-- ===== Table of Contents ===== -->
+          <aside class="dest-toc" aria-label="On this page">
+            <p class="toc-label">On this page</p>
+            <nav>
+              <ul>
+                <li class="toc-top"><a href="#about">About Amritsar</a>
+                  <ul class="toc-sub">
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#history">History &amp; Significance</a></li>
+                    <li><a href="#culture">Culture &amp; Festivals</a></li>
+                    <li><a href="#best-time">Best Time to Visit</a></li>
+                    <li><a href="#reach">How to Reach</a></li>
+                  </ul>
+                </li>
+                <li class="toc-top"><a href="#things">Things to Do</a>
+                  <ul class="toc-sub">
+                    <li><a href="#attractions">Top Attractions</a></li>
+                    <li><a href="#more">More to Explore</a></li>
+                    <li><a href="#food">Food &amp; Cuisine</a></li>
+                    <li><a href="#shopping">Shopping</a></li>
+                  </ul>
+                </li>
+                <li class="toc-top"><a href="#packages">Our Packages</a>
+                  <ul class="toc-sub">
+                    <li><a href="#tours">Tour Packages</a></li>
+                    <li><a href="#inclusions">Inclusions</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </aside>
+
+          <!-- ===== Content ===== -->
+          <div class="dest-content">
+
+            <!-- ========== 1. ABOUT ========== -->
+            <section id="about">
+              <div id="overview" class="sub-block">
+                <div class="split">
+                  <div class="split-media reveal">
+                    <img src="../assets/amritsar-golden-temple-night.jpg" alt="The Golden Temple illuminated at night" loading="lazy" />
+                    <div class="img-badge"><span class="dot"></span>Punjab · India</div>
+                  </div>
+                  <div class="body reveal d1">
+                    <span class="eyebrow">About Amritsar</span>
+                    <h2 class="section-title">A city built around a pool of nectar.</h2>
+                    <p class="lead">Founded in 1577 by the fourth Sikh Guru, Guru Ram Das, Amritsar takes its name from the <em>Amrit Sarovar</em> — the "Pool of Nectar" that surrounds the Golden Temple.</p>
+                    <p>Here faith, food and history sit side by side. Pilgrims and travellers arrive from across the world to walk the marble parkarma, share a meal in the world's largest community kitchen, and witness the fervour of the India–Pakistan border just beyond the city.</p>
+                    <blockquote class="pull-quote">Gold by day, glowing reflections by night — Amritsar stays with you.</blockquote>
+                    <div class="stat-trio">
+                      <div class="stat"><b>2–3</b><span>Ideal days</span></div>
+                      <div class="stat"><b>14+</b><span>Sights</span></div>
+                      <div class="stat"><b>1577</b><span>Founded</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div id="history" class="sub-block reveal">
+                <p class="sub-head">History &amp; Significance</p>
+                <h3 class="block-title">Faith, empire and the freedom struggle.</h3>
+                <p>Amritsar grew around the sacred sarovar and the <b>Golden Temple (Sri Harmandir Sahib)</b>, the holiest shrine in Sikhism. Sitting on historic trade routes, this crossroads position shaped its now-legendary cuisine as travellers brought new ingredients and techniques. The city later flourished as the capital of the Sikh Empire under Maharaja Ranjit Singh.</p>
+                <ul class="lead-list">
+                  <li><b>Golden Temple</b> — the founding heart of the city and of the Sikh faith.</li>
+                  <li><b>Jallianwala Bagh</b> — the 1919 massacre, a turning point in India's freedom struggle.</li>
+                  <li><b>Partition of 1947</b> — memorialised today in the world's first Partition Museum.</li>
+                </ul>
+              </div>
+
+              <div id="culture" class="sub-block reveal">
+                <p class="sub-head">Culture &amp; Festivals</p>
+                <h3 class="block-title">Warmth, seva and a full-hearted welcome.</h3>
+                <p>Punjabi hospitality is loud, generous and colourful. The city runs on the spirit of <em>seva</em> (selfless service) and <em>langar</em> — the free community kitchen that feeds everyone, regardless of faith or status. Time your visit around a festival and the whole city lights up.</p>
+                <div class="fact-grid">
+                  <div class="fact-card"><div class="k">Baisakhi</div><div class="v">~13–14 April, harvest &amp; Khalsa foundation</div></div>
+                  <div class="fact-card"><div class="k">Diwali</div><div class="v">Bandi Chhor Divas, temple aglow</div></div>
+                  <div class="fact-card"><div class="k">Lohri &amp; Maghi</div><div class="v">Bonfires &amp; folk celebration, winter</div></div>
+                  <div class="fact-card"><div class="k">Sufi Festival</div><div class="v">Music &amp; qawwali evenings</div></div>
+                </div>
+              </div>
+
+              <div id="best-time" class="sub-block reveal">
+                <p class="sub-head">Best Time to Visit</p>
+                <h3 class="block-title">October to March is the sweet spot.</h3>
+                <p>The pleasant window runs October through March, when the weather is ideal for sightseeing, temple visits and the open-air Wagah ceremony.</p>
+                <div class="fact-grid">
+                  <div class="fact-card"><div class="k">Winter · Dec–Feb</div><div class="v">~5–15°C · crisp &amp; festive — best</div></div>
+                  <div class="fact-card"><div class="k">Pleasant · Oct–Mar</div><div class="v">Peak season, ideal weather</div></div>
+                  <div class="fact-card"><div class="k">Summer · Apr–Jul</div><div class="v">Hot &amp; dry, often 40°C+</div></div>
+                  <div class="fact-card"><div class="k">Monsoon · Jun–Sep</div><div class="v">Humid with heavy spells of rain</div></div>
+                </div>
+              </div>
+
+              <div id="reach" class="sub-block reveal">
+                <p class="sub-head">How to Reach</p>
+                <h3 class="block-title">Easy to reach by air, rail and road.</h3>
+                <div class="fact-grid">
+                  <div class="fact-card"><div class="k">By Air</div><div class="v">Sri Guru Ram Dass Jee Intl Airport (ATQ)</div></div>
+                  <div class="fact-card"><div class="k">By Rail</div><div class="v">Amritsar Junction, frequent trains incl. Delhi</div></div>
+                  <div class="fact-card"><div class="k">By Road</div><div class="v">~450 km / ~8 hr from Delhi via NH44</div></div>
+                </div>
+              </div>
+            </section>
+
+            <!-- ========== 2. THINGS TO DO ========== -->
+            <section id="things" style="margin-top:clamp(56px,7vw,96px);">
+              <div class="section-head reveal section-eyebrow-lg">
+                <span class="eyebrow">Things to Do</span>
+                <h2 class="section-title">The sights that define a visit.</h2>
+              </div>
+
+              <div id="attractions" class="sub-block">
+                <div class="alt-blocks">
+                  <article class="alt-block reveal">
+                    <div class="alt-media"><div class="frame"><span class="index">01 · Golden Temple</span><img src="../assets/amritsar-golden-temple.jpg" alt="Golden Temple, Sri Harmandir Sahib" loading="lazy" /></div></div>
+                    <div class="alt-body">
+                      <span class="kicker">Sacred landmark</span>
+                      <h3>Golden Temple (Sri Harmandir Sahib)</h3>
+                      <p>The holiest shrine in Sikhism, its gilded sanctum mirrored in the sacred Amrit Sarovar. The 24-hour langar feeds 40,000+ people a day, free of charge. Utterly magical after dark when the gold glows against the water.</p>
+                      <div class="btn-row"><a class="btn btn-wa" href="https://wa.me/919999687120" target="_blank" rel="noopener">Enquire to visit</a></div>
+                    </div>
+                  </article>
+                  <article class="alt-block reverse reveal">
+                    <div class="alt-media"><div class="frame"><span class="index">02 · Jallianwala Bagh</span><img src="../assets/amritsar-jallianwala-bagh.jpg" alt="Jallianwala Bagh memorial garden" loading="lazy" /></div></div>
+                    <div class="alt-body">
+                      <span class="kicker">Historic memorial</span>
+                      <h3>Jallianwala Bagh</h3>
+                      <p>A solemn memorial garden to the 1919 massacre, with preserved bullet marks and the martyrs' well. A five-minute walk from the Golden Temple, it is a moving reminder of India's freedom struggle.</p>
+                    </div>
+                  </article>
+                  <article class="alt-block reveal">
+                    <div class="alt-media"><div class="frame"><span class="index">03 · Wagah Border</span><img src="../assets/amritsar-wagah-border.jpg" alt="Attari–Wagah border ceremony gate" loading="lazy" /></div></div>
+                    <div class="alt-body">
+                      <span class="kicker">Evening spectacle</span>
+                      <h3>Wagah–Attari Border</h3>
+                      <p>The theatrical evening "Beating Retreat" ceremony at the India–Pakistan border, about 30 km from the city. High-energy, patriotic and packed — arrive early for a good seat.</p>
+                      <div class="btn-row"><a class="btn btn-wa" href="https://wa.me/919999687120" target="_blank" rel="noopener">Enquire to visit</a></div>
+                    </div>
+                  </article>
+                  <article class="alt-block reverse reveal">
+                    <div class="alt-media"><div class="frame"><span class="index">04 · Partition Museum</span><img src="../assets/amritsar-partition-museum.jpg" alt="Town Hall housing the Partition Museum" loading="lazy" /></div></div>
+                    <div class="alt-body">
+                      <span class="kicker">Museum</span>
+                      <h3>Partition Museum</h3>
+                      <p>The world's first museum dedicated to the 1947 Partition, telling human stories through objects, letters and testimony. Housed in the beautifully restored historic Town Hall.</p>
+                    </div>
+                  </article>
+                  <article class="alt-block reveal">
+                    <div class="alt-media"><div class="frame"><span class="index">05 · Gobindgarh Fort</span><img src="../assets/amritsar-gobindgarh-fort.jpg" alt="Gobindgarh Fort, Amritsar" loading="lazy" /></div></div>
+                    <div class="alt-body">
+                      <span class="kicker">Heritage &amp; culture</span>
+                      <h3>Gobindgarh Fort</h3>
+                      <p>An 18th-century fort turned living heritage space, with museums, a light-and-sound show, cultural performances and a food court. A great way to spend an evening.</p>
+                    </div>
+                  </article>
+                  <article class="alt-block reverse reveal">
+                    <div class="alt-media"><div class="frame"><span class="index">06 · Durgiana Temple</span><img src="../assets/amritsar-durgiana-temple.jpg" alt="Durgiana Temple, the Silver Temple of Amritsar" loading="lazy" /></div></div>
+                    <div class="alt-body">
+                      <span class="kicker">Temple</span>
+                      <h3>Durgiana Temple</h3>
+                      <p>The "Silver Temple," a Hindu shrine to Goddess Lakshmi and Lord Vishnu whose layout beautifully echoes the Golden Temple, set around its own tranquil tank.</p>
+                    </div>
+                  </article>
+                </div>
+              </div>
+
+              <div id="more" class="sub-block">
+                <div class="section-head reveal"><span class="eyebrow">More to Explore</span><h2 class="section-title">Beyond the headline sights.</h2></div>
+                <div class="svc-grid">
+                  <a class="svc-card reveal" href="https://wa.me/919999687120" target="_blank" rel="noopener">
+                    <img src="../assets/amritsar-akal-takht.jpg" alt="Akal Takht within the Golden Temple complex" loading="lazy" />
+                    <span class="plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+                    <div class="svc-inner"><span class="tag">Within the complex</span><h3>Akal Takht</h3><p>The highest seat of Sikh temporal authority, founded in 1606, facing the Golden Temple.</p></div>
+                  </a>
+                  <a class="svc-card reveal d1" href="https://wa.me/919999687120" target="_blank" rel="noopener">
+                    <img src="../assets/amritsar-sadda-pind.jpg" alt="Sadda Pind heritage village, Amritsar" loading="lazy" />
+                    <span class="plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+                    <div class="svc-inner"><span class="tag">Cultural village</span><h3>Sadda Pind</h3><p>A recreated living Punjabi village — crafts, folk music and dance, and hearty local food.</p></div>
+                  </a>
+                </div>
+                <div class="feature-grid" style="margin-top:26px;">
+                  <div class="feature-card reveal">
+                    <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg></div>
+                    <h3>Maharaja Ranjit Singh Museum</h3>
+                    <p>A former summer palace showcasing arms, paintings and artifacts of the Sikh Empire.</p>
+                  </div>
+                  <div class="feature-card reveal d1">
+                    <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2 4 4 .5-3 3 .8 4L12 16l-3.8 1.5.8-4-3-3 4-.5z"/></svg></div>
+                    <h3>Mata Lal Devi Temple</h3>
+                    <p>The mirror-clad "Sheesh Mahal of Amritsar," with cave-like passages and shallow water crossings.</p>
+                  </div>
+                  <div class="feature-card reveal d2">
+                    <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M6 21V10M18 21V10M4 10h16l-8-6z"/></svg></div>
+                    <h3>Khair-ud-Din Masjid &amp; Khalsa College</h3>
+                    <p>A striking heritage mosque (1876) and the century-old Khalsa College, an architectural landmark.</p>
+                  </div>
+                  <div class="feature-card reveal">
+                    <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s4-6 10-6 10 6 10 6M2 12s4 6 10 6 10-6 10-6"/><circle cx="12" cy="12" r="2"/></svg></div>
+                    <h3>Harike Wetland <small>· day trip</small></h3>
+                    <p>The largest wetland in North India (~60 km); superb for birdwatching, especially in winter.</p>
+                  </div>
+                  <div class="feature-card reveal d1">
+                    <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 5v3c0 5-3.5 8-8 10-4.5-2-8-5-8-10V8z"/></svg></div>
+                    <h3>Tarn Taran Sahib <small>· day trip</small></h3>
+                    <p>A historic gurudwara (~25 km) said to have the largest sarovar of any Sikh shrine.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- ===== FOOD (tinted, breaks out of column) ===== -->
+            <div id="food" class="sub-block">
+              <div class="split">
+                <div class="split-media reveal">
+                  <img src="../assets/amritsar-food.jpg" alt="Amritsari kulcha served with chhole" loading="lazy" />
+                  <div class="img-badge"><span class="dot"></span>Amritsari kulcha</div>
+                </div>
+                <div class="body reveal d1">
+                  <span class="eyebrow">Food &amp; Cuisine</span>
+                  <h2 class="section-title">A pilgrimage for eaters.</h2>
+                  <p>Amritsar is as much a food capital as a spiritual one. Start with the iconic <b>Amritsari kulcha</b> — a crisp, tandoor-baked stuffed flatbread with chole and white butter — the city's signature morning ritual.</p>
+                  <ul class="lead-list">
+                    <li><b>Amritsari fish fry</b> — carom-spiced, gram-flour-battered, deep-fried.</li>
+                    <li><b>Dal makhani</b> — black lentils slow-cooked overnight, velvety and rich.</li>
+                    <li><b>Thick lassi</b> — topped with malai and butter, in giant glasses.</li>
+                    <li><b>Sarson da saag &amp; makki di roti</b> — a winter classic.</li>
+                    <li><b>Langar</b> at the Golden Temple — free, 24 hours, the most moving meal in the city.</li>
+                  </ul>
+                  <p style="margin-top:16px;color:var(--muted);font-size:.92rem;">Iconic spots: Kesar Da Dhaba (est. 1916), Bharawan Da Dhaba, Brother's Dhaba — the Lawrence Road / Hall Gate area has the densest cluster of legendary eateries.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- ===== SHOPPING ===== -->
+            <div id="shopping" class="sub-block">
+              <div class="split reverse">
+                <div class="split-media reveal">
+                  <img src="../assets/amritsar-bazaar.jpg" alt="Bustling market street in Amritsar" loading="lazy" />
+                  <div class="img-badge"><span class="dot"></span>Hall Bazaar</div>
+                </div>
+                <div class="body reveal d1">
+                  <span class="eyebrow">Shopping</span>
+                  <h2 class="section-title">Phulkari, juttis and colour.</h2>
+                  <p>Amritsar's old bazaars are a riot of craft and colour. Come home with <b>phulkari embroidery</b>, handcrafted <b>Punjabi juttis</b>, bright textiles, woollens and brassware.</p>
+                  <div class="fact-grid">
+                    <div class="fact-card"><div class="k">Hall Bazaar</div><div class="v">Oldest &amp; busiest — juttis, handicrafts</div></div>
+                    <div class="fact-card"><div class="k">Katra Jaimal Singh</div><div class="v">Home of authentic phulkari</div></div>
+                    <div class="fact-card"><div class="k">Kapda Bazaar</div><div class="v">Ethnic wear, suits &amp; bridal</div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ========== 3. PACKAGES ========== -->
+            <section id="packages" style="margin-top:clamp(56px,7vw,96px);">
+              <div id="tours" class="sub-block">
+                <div class="section-head reveal section-eyebrow-lg">
+                  <span class="eyebrow">Our Packages</span>
+                  <h2 class="section-title">Curated Amritsar tours.</h2>
+                  <p class="lead">Hand-planned itineraries with stays, transfers and the Wagah trip sorted — just tell us your dates.</p>
+                </div>
+                <div class="pkg-grid">
+                  <div class="pkg-card reveal">
+                    <span class="pkg-dur">2 Nights / 3 Days</span>
+                    <h3 class="pkg-name">Golden Temple Essentials</h3>
+                    <p class="pkg-hook">A soulful weekend at the heart of the holy city.</p>
+                    <p class="pkg-price"><b>₹ TODO</b><small>per person, from</small></p>
+                    <ul class="pkg-list">
+                      <li>Day 1 — Arrival &amp; illuminated night darshan</li>
+                      <li>Day 2 — Golden Temple, Jallianwala Bagh, Wagah ceremony</li>
+                      <li>Day 3 — Local food walk &amp; departure</li>
+                    </ul>
+                    <p class="pkg-best"><b>Best for:</b> a quick spiritual getaway / weekend.</p>
+                    <a class="btn btn-primary" href="https://forms.gle/wTLGdkfSHzj35NgC6" target="_blank" rel="noopener">Enquire Now</a>
+                  </div>
+
+                  <div class="pkg-card featured reveal d1">
+                    <span class="pkg-dur">3 Nights / 4 Days</span>
+                    <h3 class="pkg-name">Amritsar Heritage &amp; Wagah</h3>
+                    <p class="pkg-hook">The full city — faith, history and Punjabi culture.</p>
+                    <p class="pkg-price"><b>₹ TODO</b><small>per person, from</small></p>
+                    <ul class="pkg-list">
+                      <li>Everything in Essentials, plus</li>
+                      <li>Partition Museum &amp; Gobindgarh Fort</li>
+                      <li>Durgiana Temple &amp; Sadda Pind evening</li>
+                      <li>Guided bazaar shopping</li>
+                    </ul>
+                    <p class="pkg-best"><b>Best for:</b> families &amp; first-time visitors.</p>
+                    <a class="btn btn-primary" href="https://forms.gle/wTLGdkfSHzj35NgC6" target="_blank" rel="noopener">Enquire Now</a>
+                  </div>
+
+                  <div class="pkg-card reveal d2">
+                    <span class="pkg-dur">4 Nights / 5 Days</span>
+                    <h3 class="pkg-name">Punjab Cultural Circuit</h3>
+                    <p class="pkg-hook">A slow, immersive journey through Amritsar and around.</p>
+                    <p class="pkg-price"><b>₹ TODO</b><small>per person, from</small></p>
+                    <ul class="pkg-list">
+                      <li>Amritsar core sightseeing</li>
+                      <li>Day trips — Tarn Taran &amp; Harike Wetland</li>
+                      <li>Extended food trail &amp; shopping</li>
+                      <li>Optional Golden Temple seva experience</li>
+                    </ul>
+                    <p class="pkg-best"><b>Best for:</b> slow, immersive travellers.</p>
+                    <a class="btn btn-primary" href="https://forms.gle/wTLGdkfSHzj35NgC6" target="_blank" rel="noopener">Enquire Now</a>
+                  </div>
+                </div>
+              </div>
+
+              <div id="inclusions" class="sub-block reveal">
+                <div class="section-head"><span class="eyebrow">Good to Know</span><h2 class="section-title">What's included.</h2></div>
+                <div class="incl-grid">
+                  <div class="incl-card inc">
+                    <h4>Inclusions</h4>
+                    <ul>
+                      <li>Hotel stay for the package duration</li>
+                      <li>Daily breakfast</li>
+                      <li>AC transfers and sightseeing cab</li>
+                      <li>Wagah Border trip</li>
+                      <li>Guide assistance</li>
+                    </ul>
+                  </div>
+                  <div class="incl-card exc">
+                    <h4>Exclusions</h4>
+                    <ul>
+                      <li>Flights / train fare</li>
+                      <li>Lunches and dinners (unless specified)</li>
+                      <li>Personal expenses</li>
+                      <li>Entry tickets not listed</li>
+                    </ul>
+                  </div>
+                </div>
+                <p class="price-note">Prices shown as “TODO” are placeholders and will be confirmed on enquiry.</p>
+              </div>
+            </section>
+
+          </div><!-- /.dest-content -->
+        </div><!-- /.dest-layout -->
+      </div>
+    </section>
+
+    <!-- ================= CTA BAND ================= -->
+    <section class="section-pad cta-band">
+      <div class="cta-band-media"><img src="../assets/amritsar-golden-temple-night.jpg" alt="Golden Temple at night" loading="lazy" /></div>
+      <div class="wrap wrap-wide">
+        <div class="inner reveal">
+          <h2>Ready to plan your Amritsar trip?</h2>
+          <p>Tell us your dates and travel style, and we'll shape the perfect itinerary — temple, food, Wagah and all.</p>
+          <div class="btn-row">
+            <a class="btn btn-light btn-lg" href="https://forms.gle/wTLGdkfSHzj35NgC6" target="_blank" rel="noopener">Enquire Now</a>
+            <a class="btn btn-wa btn-lg" href="https://wa.me/919999687120" target="_blank" rel="noopener">WhatsApp Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="wrap wrap-wide">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="../index.html" class="brand"><span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7S2 12 2 12Z"/><path d="M12 5c2 2 2 12 0 14M12 5c-2 2-2 12 0 14"/></svg></span><span>Travel <b>Thrive</b></span></a>
+          <p>Plan to travel, travel to thrive. A travel agency and tour operator serving travellers since 2000.</p>
+        </div>
+        <div class="footer-col"><h4>Explore</h4><ul><li><a href="../index.html">Home</a></li><li><a href="../about.html">About Us</a></li><li><a href="../packages.html">Services</a></li><li><a href="../contact.html">Contact Us</a></li></ul></div>
+        <div class="footer-col"><h4>Services</h4><ul><li><a href="../packages.html#inbound">Inbound Travel</a></li><li><a href="../packages.html#domestic">Domestic Travel</a></li><li><a href="../packages.html#outbound">Outbound Travel</a></li><li><a href="../packages.html">Hotels &amp; Visas</a></li><li><a href="../packages.html">Insurance &amp; Forex</a></li></ul></div>
+        <div class="footer-col footer-contact">
+          <h4>Contact</h4>
+          <div class="line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Shop No. 2, Old Market, Tilak Nagar, New Delhi – 110018</span></div>
+          <div class="line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg><span><a href="tel:+919999687120">+91 99996 87120</a><br><a href="tel:+919582528718">+91 95825 28718</a><br><a href="tel:+911145642929">+91 11 4564 2929</a></span></div>
+          <div class="line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7 10-7"/></svg><span><a href="mailto:contact@travelthrive.com">contact@travelthrive.com</a></span></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copy">© <span data-year>2026</span> Travel Thrive. All rights reserved.</span>
+        <div class="footer-legal"><a href="#">Terms &amp; Conditions</a><a href="#">Privacy Policy</a><a href="#">Payment Security</a><a href="#">Cancellation Policy</a><a href="#">India Domestic Quarantine Rules</a></div>
+        <div class="footer-social">
+          <a href="https://wa.me/919999687120" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.6.1-.2.3-.7 1-.9 1.1-.2.2-.3.2-.6.1-1.5-.8-2.5-1.4-3.5-3.1-.3-.5.3-.4.7-1.4.1-.2 0-.4 0-.5C10 9.6 9.5 8.3 9.3 7.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.7.7-1 1.6-1 2.6 0 1.5 1.1 3 1.3 3.2.2.2 2.2 3.4 5.4 4.7 2 .8 2.8.9 3.8.8.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3ZM12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Z"/></svg></a>
+          <a href="mailto:contact@travelthrive.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7 10-7"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a class="wa-float" href="https://wa.me/919999687120" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.6.1-.2.3-.7 1-.9 1.1-.2.2-.3.2-.6.1-1.5-.8-2.5-1.4-3.5-3.1-.3-.5.3-.4.7-1.4.1-.2 0-.4 0-.5C10 9.6 9.5 8.3 9.3 7.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.7.7-1 1.6-1 2.6 0 1.5 1.1 3 1.3 3.2.2.2 2.2 3.4 5.4 4.7 2 .8 2.8.9 3.8.8.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3ZM12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Z"/></svg></a>
+
+  <nav class="mobile-bar" aria-label="Quick contact">
+    <a class="call" href="tel:+919999687120"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg>Call Now</a>
+    <a class="wa" href="https://wa.me/919999687120" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.6.1-.2.3-.7 1-.9 1.1-.2.2-.3.2-.6.1-1.5-.8-2.5-1.4-3.5-3.1-.3-.5.3-.4.7-1.4.1-.2 0-.4 0-.5C10 9.6 9.5 8.3 9.3 7.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.7.7-1 1.6-1 2.6 0 1.5 1.1 3 1.3 3.2.2.2 2.2 3.4 5.4 4.7 2 .8 2.8.9 3.8.8.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3ZM12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Z"/></svg>WhatsApp</a>
+  </nav>
+
+  <!-- Table-of-Contents scroll-spy (page-scoped) -->
+  <script>
+    (function () {
+      var links = Array.prototype.slice.call(document.querySelectorAll('.dest-toc a[href^="#"]'));
+      if (!links.length) return;
+      var map = {};
+      var targets = [];
+      links.forEach(function (a) {
+        var id = a.getAttribute('href').slice(1);
+        var el = document.getElementById(id);
+        if (el) { map[id] = a; targets.push(el); }
+        a.addEventListener('click', function (e) {
+          if (!el) return;
+          e.preventDefault();
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          history.replaceState(null, '', '#' + id);
+        });
+      });
+      function setActive(id) {
+        links.forEach(function (a) { a.classList.remove('active'); });
+        if (map[id]) map[id].classList.add('active');
+      }
+      if ('IntersectionObserver' in window) {
+        var visible = {};
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (en) { visible[en.target.id] = en.isIntersecting ? en.intersectionRatio : 0; });
+          var bestId = null, best = 0;
+          targets.forEach(function (t) { if ((visible[t.id] || 0) > best) { best = visible[t.id]; bestId = t.id; } });
+          if (bestId) setActive(bestId);
+        }, { rootMargin: '-45% 0px -50% 0px', threshold: [0, 0.25, 0.5, 1] });
+        targets.forEach(function (t) { io.observe(t); });
+      }
+    })();
+  </script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
