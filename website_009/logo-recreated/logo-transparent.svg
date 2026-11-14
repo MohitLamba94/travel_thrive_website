@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1250" height="1134" viewBox="0 0 1250 1134" fill="none">
+  <title>Travel Thrive logo - transparent background</title>
+  <desc>Vector recreation of the supplied logo: a rounded teal frame, mountain monogram, and orange sun.</desc>
+  <defs>
+    <linearGradient id="frame" x1="165" y1="130" x2="1075" y2="1040" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2E7E81"/>
+      <stop offset="0.55" stop-color="#2A797C"/>
+      <stop offset="1" stop-color="#317F81"/>
+    </linearGradient>
+    <linearGradient id="mountain" x1="325" y1="435" x2="698" y2="267" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#287A7D"/>
+      <stop offset="1" stop-color="#348588"/>
+    </linearGradient>
+    <linearGradient id="monogram" x1="350" y1="500" x2="855" y2="960" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#15565C"/>
+      <stop offset="0.55" stop-color="#15545A"/>
+      <stop offset="1" stop-color="#1B5D62"/>
+    </linearGradient>
+    <linearGradient id="sun" x1="780" y1="695" x2="882" y2="790" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F58220"/>
+      <stop offset="1" stop-color="#F67D1B"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#frame)" fill-rule="evenodd" d="M391 99
+    C527 92 734 92 861 99
+    C1002 104 1084 192 1091 327
+    C1097 472 1097 679 1090 822
+    C1084 959 1008 1043 873 1051
+    C730 1060 531 1060 389 1051
+    C245 1046 161 970 155 827
+    C149 683 149 480 155 337
+    C160 197 250 105 391 99 Z
+    M393 155
+    C529 148 731 148 857 155
+    C965 159 1030 225 1036 330
+    C1042 473 1042 677 1035 819
+    C1030 925 971 990 870 996
+    C730 1004 532 1004 392 996
+    C281 992 215 931 210 824
+    C204 682 204 482 210 340
+    C214 234 283 160 393 155 Z"/>
+  <path fill="url(#mountain)" d="M298 455 603 244 714 324 673 365 603 316 393 455 Z"/>
+  <path fill="url(#monogram)" d="M323 598
+    C338 520 393 472 478 472
+    H626 L744 346 977 517 H769 L817 467 711 393 710 472
+    H772 L710 537 V731
+    C710 794 739 826 789 836
+    C838 850 884 822 912 783
+    C896 849 859 883 798 897
+    C721 995 630 1046 524 1054
+    C478 1055 432 1053 389 1051
+    C316 1049 264 1028 226 987
+    C299 993 393 999 490 1000
+    C583 1004 663 951 719 883
+    C668 856 642 808 642 737
+    V538 H551 V758
+    C550 830 583 885 645 904
+    C538 899 484 849 484 765
+    V604 C484 576 491 554 506 539
+    H431 C382 539 348 558 323 598 Z"/>
+  <circle cx="829" cy="740" r="65" fill="url(#sun)"/>
+</svg>
